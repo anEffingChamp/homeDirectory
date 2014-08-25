@@ -20,4 +20,4 @@ PS1='\[\e[1;36m\]$(date +%a:%H%M) \u:\w$(parse_git_branch) \[\e[m\]'
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-
+#http://bluishcoder.co.nz/articles/mac-ssh.html
