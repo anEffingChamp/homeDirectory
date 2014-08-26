@@ -78,11 +78,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[\e[m\]\[$BGreen\]\w$(parse_git_branch) \[\e[m\]"
-##
-# Your previous /Users/jonathan/.bash_profile file was backed up as /Users/jonathan/.bash_profile.macports-saved_2014-08-19_at_17:49:52
-##
 
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+
 #http://bluishcoder.co.nz/articles/mac-ssh.html
+#http://randomviking.wordpress.com/2008/12/21/adding-some-color-to-ls-in-mac-os/
+alias ls='/bin/ls -G'
