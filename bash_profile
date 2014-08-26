@@ -12,7 +12,7 @@ fi
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1='\[\e[1;36m\]$(date +%a:%H%M) \u:\w$(parse_git_branch) \[\e[m\]'
+PS1='\[\e[1;36m\]$(date +%a:%H%M) \u:\[\e[m\]\[\e[1;32m\]\w$(parse_git_branch) \[\e[m\]'
 ##
 # Your previous /Users/jonathan/.bash_profile file was backed up as /Users/jonathan/.bash_profile.macports-saved_2014-08-19_at_17:49:52
 ##
