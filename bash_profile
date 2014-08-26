@@ -84,7 +84,8 @@ PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[$Green\]\w$(parse_git_branch) \[$colEnd\]"
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-#http://bluishcoder.co.nz/articles/mac-ssh.html
-#http://randomviking.wordpress.com/2008/12/21/adding-some-color-to-ls-in-mac-os/
-alias ls='$(which ls) -G'
-alias ssh='$(which ssh) -C'
+# http://randomviking.wordpress.com/2008/12/21/adding-some-color-to-ls-in-mac-os/
+# http://linux.die.net/man/1/ls
+alias ls='$(which ls) -GA'
+# http://linux.die.net/man/1/ssh
+alias ssh='$(which ssh) -y -c blowfish'
