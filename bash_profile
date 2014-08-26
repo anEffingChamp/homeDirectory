@@ -77,11 +77,12 @@ On_IWhite='\e[0;107m'   # White
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[\e[m\]\[$BGreen\]\w$(parse_git_branch) \[\e[m\]"
+PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[\e[m\]\[$Green\]\w$(parse_git_branch) \[\e[m\]"
 
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 #http://bluishcoder.co.nz/articles/mac-ssh.html
 #http://randomviking.wordpress.com/2008/12/21/adding-some-color-to-ls-in-mac-os/
-alias ls='/bin/ls -G'
+alias ls='$(which ls) -G'
+alias ssh='$(which ssh) -C'
