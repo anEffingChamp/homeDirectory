@@ -74,10 +74,12 @@ On_IBlue='\e[0;104m'    # Blue
 On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
+colEnd='\e[m'
+
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[\e[m\]\[$Green\]\w$(parse_git_branch) \[\e[m\]"
+PS1="\[$Cyan\]$(date +%a:%H%M) \u:\[$Green\]\w$(parse_git_branch) \[$colEnd\]"
 
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
