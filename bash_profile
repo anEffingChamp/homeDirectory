@@ -89,3 +89,5 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 alias ls='$(which ls) -GA'
 # http://linux.die.net/man/1/ssh
 alias ssh='$(which ssh) -y -c blowfish'
+# http://linux.die.net/man/1/less
+alias less='$(which less) -msr'
