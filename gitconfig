@@ -1,0 +1,8 @@
+[user]
+	email = jonathan@smalls.cc
+[core]
+	editor = vim
+[push]
+	default = simple
+[rebase]
+	stat = true
