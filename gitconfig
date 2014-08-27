@@ -2,7 +2,15 @@
 	email = jonathan@smalls.cc
 [core]
 	editor = vim
+	autocrlf = input
+	symlinks = true
+	compression = -1
+	loosecompression = -1
 [push]
 	default = simple
 [rebase]
 	stat = true
+[color]
+	ui = true
+[merge]
+	tool = vimdiff
