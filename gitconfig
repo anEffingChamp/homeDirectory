@@ -7,11 +7,11 @@
 	compression = -1
 	loosecompression = -1
 [push]
-	default = simple
+	default = current
 [rebase]
 	stat = true
 [color]
-	ui = true
+	ui = always
 	branch = auto
 	diff = auto
 	grep = auto
@@ -20,3 +20,7 @@
 	status = always
 [merge]
 	tool = vimdiff
+	verbosity = 1
+[diff]
+	dirstat = lines
+	renames = copy
