@@ -13,7 +13,7 @@ fi
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1='\[\e[0;36m\]$(date +%a:%H%M) \u:\[\e[0;32m\]\w$(parse_git_branch) \[\e[m\]'
+PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w$(parse_git_branch) \[\e[m\]'
 
 # MacPorts Installer addition on 2014-08-19_at_17:49:52: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -25,3 +25,5 @@ alias ls='$(which ls) -GA'
 alias ssh='$(which ssh) -y -c blowfish'
 # http://linux.die.net/man/1/less
 alias less='$(which less) -msr'
+# http://linux.die.net/man/1/rsync
+alias rsync='$(which rsync) --update --compress --copy-links'
