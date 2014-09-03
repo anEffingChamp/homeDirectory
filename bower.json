@@ -1,0 +1,22 @@
+{
+  "name": "homeDirectory",
+  "version": "0.0.0",
+  "moduleType": [
+    "node",
+    "yui"
+  ],
+  "authors": [
+    "Jonathan Smalls"
+  ],
+  "license": "MIT",
+  "homepage": "http://smalls.cc",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+  ],
+  "dependencies": {
+	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752"
+  }
+}
