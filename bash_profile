@@ -13,10 +13,8 @@ function parse_git_branch {
 PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w$(parse_git_branch) \[\e[m\]'
 
 # http://linux.die.net/man/1/ls
+# Swap in your favorite command in place of LS for a manual.
 alias ls='ls -GA'
-# http://linux.die.net/man/1/ssh
 alias ssh='ssh -y -c blowfish'
-# http://linux.die.net/man/1/less
 alias less='less -msr'
-# http://linux.die.net/man/1/rsync
 alias rsync='rsync --update --compress --copy-links'
