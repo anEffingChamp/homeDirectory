@@ -18,3 +18,7 @@ alias ls='ls -GA'
 alias ssh='ssh -y -c blowfish'
 alias less='less -msr'
 alias rsync='rsync --update --compress --copy-links'
+# ACOC block
+alias ping='acoc ping -c 10 -i 0.1'
+alias traceroute='acoc traceroute -nw 1'
+alias w='acoc w'
