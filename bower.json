@@ -14,9 +14,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "bower_components"
   ],
   "dependencies": {
-	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752"
+	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752",
+	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394"
   }
 }
