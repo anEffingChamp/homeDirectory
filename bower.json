@@ -18,6 +18,7 @@
   ],
   "dependencies": {
 	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752",
-	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394"
+	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394",
+	  "vimrc": "https://github.com/amix/vimrc.git"
   }
 }

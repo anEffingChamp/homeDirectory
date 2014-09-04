@@ -1,14 +1,7 @@
-set runtimepath+=~/.vim_runtime
-
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
-
-try
-source ~/.vim_runtime/nginx.vim
-catch
-endtry
+source ~/.bower_components/vimNginx/index.vim
+source ~/.bower_components/vimrc/vimrcs/basic.vim
+source ~/.bower_components/vimrc/vimrcs/filetypes.vim
+source ~/.bower_components/vimrc/vimrcs/extended.vim
 
 set shiftwidth=4
 set tabstop=4
