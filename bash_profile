@@ -18,6 +18,7 @@ alias ls='ls -GA'
 alias ssh='ssh -y -c blowfish'
 alias less='less -msr'
 alias rsync='rsync --update --compress --copy-links'
+alias restart='sudo shutdown -r now'
 # ACOC block
 alias ping='acoc ping -c 10 -i 0.1'
 alias top='acoc top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
