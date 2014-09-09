@@ -12,8 +12,6 @@ function parse_git_branch {
 }
 PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w$(parse_git_branch) \[\e[m\]'
 
-# http://linux.die.net/man/1/ls
-# Swap in your favorite command in place of LS for a manual.
 alias ls='ls -GA'
 alias ssh='ssh -y -c blowfish'
 alias less='less -msr'
@@ -26,6 +24,8 @@ alias traceroute='acoc traceroute -nw 1'
 alias w='acoc w'
 
 # startup routine
+echo -e "\x1B[0;32m$(fortune)\033"
+echo ''
 w
 echo ''
 ls
