@@ -6,6 +6,7 @@
 	symlinks = true
 	compression = -1
 	loosecompression = -1
+	excludesfile = /Users/jonathan/.gitignore
 [push]
 	default = current
 [rebase]
