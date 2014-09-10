@@ -1,4 +1,3 @@
-source ~/.bower_components/vimNginx/index.vim
 source ~/.bower_components/vimrc/vimrcs/basic.vim
 source ~/.bower_components/vimrc/vimrcs/filetypes.vim
 source ~/.bower_components/vimrc/vimrcs/extended.vim
