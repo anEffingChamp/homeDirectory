@@ -10,7 +10,7 @@ fi
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w$(parse_git_branch) \[\e[m\]'
+PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w\[\e[1;35m\]$(parse_git_branch) \[\e[m\]'
 
 alias ls='ls -GA'
 alias ssh='ssh -y -c blowfish'
