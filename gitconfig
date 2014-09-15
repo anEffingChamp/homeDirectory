@@ -25,3 +25,5 @@
 [diff]
 	dirstat = lines
 	renames = copy
+[init]
+	templatedir = /Users/jonathan/.gitTemplate/
