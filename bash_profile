@@ -13,6 +13,7 @@ function parse_git_branch {
 PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w\[\e[1;35m\]$(parse_git_branch) \[\e[m\]'
 
 alias ls='ls -GA'
+alias ln='ln -sv'
 alias ssh='ssh -y -c blowfish'
 alias less='less -msr'
 alias rsync='rsync --update --compress --copy-links'
