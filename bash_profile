@@ -16,6 +16,7 @@ alias ls='ls -GA'
 alias ln='ln -sv'
 alias ssh='ssh -y -c blowfish'
 alias less='less -msr'
+alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links'
 alias restart='sudo shutdown -r now'
 # ACOC block
