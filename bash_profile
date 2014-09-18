@@ -12,18 +12,23 @@ function parse_git_branch {
 }
 PS1='\[\e[0;36m\]$(date +%a:%H%M) \u@\h:\[\e[0;32m\]\w\[\e[1;35m\]$(parse_git_branch) \[\e[m\]'
 
+alias less='less -msr'
 alias ls='ls -GA'
 alias ln='ln -sv'
 alias ssh='ssh -y -c blowfish'
-alias less='less -msr'
 alias rm='rm -v'
-alias rsync='rsync --update --compress --copy-links'
 alias restart='sudo shutdown -r now'
+alias rsync='rsync --update --compress --copy-links'
 # ACOC block
 alias ping='acoc ping -c 10 -i 0.1'
 alias top='acoc top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 alias traceroute='acoc traceroute -nw 1'
 alias w='acoc w -i'
+
+# external configuration
+if [ -f ~/.bashConfig/webDevelopment ]; then
+	source ~/.bashConfig/webDevelopment
+fi
 
 # startup routine
 echo -e "\x1B[0;32m$(fortune)\033"

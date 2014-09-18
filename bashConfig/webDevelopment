@@ -1,0 +1,2 @@
+# http://www.hpl.hp.com/research/linux/httperf/httperf-man-0.9.txt
+alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
