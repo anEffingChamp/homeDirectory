@@ -34,10 +34,7 @@ if [ -f ~/.bashConfig/webDevelopment ]; then
 fi
 
 # startup routine
-if [ -x ~/.gentoo/startprefix ]; then
-	~/.gentoo/startprefix
-fi
-echo -e "\x1B[0;32m$(fortune)\033"
+echo -e "\x1B[0;32m$(fortune)\033[m"
 echo ''
 w
 echo ''
