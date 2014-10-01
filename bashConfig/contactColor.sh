@@ -1,8 +1,8 @@
+# You may wonder why I go through all of this trouble. If you manage multiple
+# servers then you can never have enough cues to visually distinguish them. Color
+# that prompt, baby. The first letter determines the color to give another indication.
 function contactColor {
-	szString=$(whoami)
-	if [ -o host ]; then
-		szString=$(hostname)
-	fi
+	szString=$($1)
 	case ${szString:0:1} in
 		[ab]) colName='0;31';;
 		[cd]) colName='0;33';;
