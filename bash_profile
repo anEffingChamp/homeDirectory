@@ -20,13 +20,12 @@ alias rm='rm -v'
 alias restart='sudo shutdown -r now'
 alias rsync='rsync --update --compress --copy-links'
 # acoc block
-if [ -x acoc ]; then
-	$acoc='acoc'
+if [ -f ~/.acoc.conf ]; then
+	alias ping='acoc ping -c 10 -i 0.1'
+	alias top='acoc top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
+	alias traceroute='acoc traceroute -nw 1'
+	alias w='acoc w -i'
 fi
-alias ping='$acoc ping -c 10 -i 0.1'
-alias top='$acoc top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
-alias traceroute='$acoc traceroute -nw 1'
-alias w='$acoc w -i'
 
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
