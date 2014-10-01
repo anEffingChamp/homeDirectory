@@ -28,7 +28,6 @@ alias top='$acoc top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 alias traceroute='$acoc traceroute -nw 1'
 alias w='$acoc w -i'
 
-
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment
@@ -36,7 +35,7 @@ fi
 
 # startup routine
 if [ -x ~/.gentoo/startprefix ]; then
-	startprefix &
+	~/.gentoo/startprefix
 fi
 echo -e "\x1B[0;32m$(fortune)\033"
 echo ''
