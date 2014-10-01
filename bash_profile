@@ -9,7 +9,7 @@ fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
-PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[0;32m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
+PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
 
 alias less='less -msr'
 alias ls='ls -GA'

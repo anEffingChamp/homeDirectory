@@ -2,8 +2,13 @@
 # servers then you can never have enough cues to visually distinguish them. Color
 # that prompt, baby. The first letter determines the color to give another indication.
 function contactColor {
-	szString=$($1)
-	case ${szString:0:1} in
+	szString=$1
+	szString=${szString##*/}
+	if [ $1 != $PWD ]; then
+		szString=$($1)
+	fi
+	szString=${szString:0:1}
+	case $szString in
 		[ab]) colName='0;31';;
 		[cd]) colName='0;33';;
 		[ef]) colName='0;34';;
