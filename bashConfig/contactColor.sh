@@ -1,6 +1,6 @@
+module_param( szString, charp, 0 )
 function contactColor {
-	szUser=$(whoami)
-	case ${szUser:0:1} in
+	case ${szString:0:1} in
 		[ab]) colName='0;31';;
 		[cd]) colName='0;32';;
 		[ef]) colName='0;33';;
@@ -15,5 +15,4 @@ function contactColor {
 		[wx]) colName='1;34';;
 		[yz]) colName='1;35';;
 	esac
-	echo $colName
 }
