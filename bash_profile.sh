@@ -18,6 +18,7 @@ alias ssh='ssh -y -c blowfish'
 alias rm='rm -v'
 alias restart='sudo shutdown -r now'
 alias rsync='rsync --update --compress --copy-links'
+alias wget='wget --timestamping --no-verbose --no-clobber --continue --no-host-directories --no-cache --no-check-certificate --convert-links --page-requisites'
 # acoc block
 if [ -f ~/.acoc.conf ]; then
 	alias ping='acoc ping -c 10 -i 0.1'

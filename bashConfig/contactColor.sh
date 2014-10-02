@@ -18,7 +18,7 @@ function contactColor {
 		[mn7]) colName='1;30';;
 		[op8]) colName='1;31';;
 		[qr9]) colName='1;32';;
-		[st]) colName='1;33';;
+		[st~]) colName='1;33';;
 		[uv]) colName='1;34';;
 		[wx]) colName='1;35';;
 		[yz]) colName='1;36';;
