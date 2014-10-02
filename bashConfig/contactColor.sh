@@ -9,15 +9,15 @@ function contactColor {
 	fi
 	szString=${szString:0:1}
 	case $szString in
-		[ab]) colName='0;31';;
-		[cd]) colName='0;33';;
-		[ef]) colName='0;34';;
-		[gh]) colName='0;35';;
-		[ij]) colName='0;36';;
-		[kl]) colName='0;37';;
-		[mn]) colName='1;30';;
-		[op]) colName='1;31';;
-		[qr]) colName='1;32';;
+		[ab1]) colName='0;31';;
+		[cd2]) colName='0;33';;
+		[ef3]) colName='0;34';;
+		[gh4]) colName='0;35';;
+		[ij5]) colName='0;36';;
+		[kl6]) colName='0;37';;
+		[mn7]) colName='1;30';;
+		[op8]) colName='1;31';;
+		[qr9]) colName='1;32';;
 		[st]) colName='1;33';;
 		[uv]) colName='1;34';;
 		[wx]) colName='1;35';;
