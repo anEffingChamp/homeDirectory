@@ -9,19 +9,19 @@ function contactColor {
 	fi
 	szString=${szString:0:1}
 	case $szString in
-		[ab1]) colName='0;31';;
-		[cd2]) colName='0;33';;
-		[ef3]) colName='0;34';;
-		[gh4]) colName='0;35';;
-		[ij5]) colName='0;36';;
-		[kl6]) colName='0;37';;
-		[mn7]) colName='1;30';;
-		[op8]) colName='1;31';;
-		[qr9]) colName='1;32';;
-		[st~]) colName='1;33';;
-		[uv]) colName='1;34';;
-		[wx]) colName='1;35';;
-		[yz]) colName='1;36';;
+		[ab1AB]) colName='0;31';;
+		[cd2CD]) colName='0;33';;
+		[ef3EF]) colName='0;34';;
+		[gh4GH]) colName='0;35';;
+		[ij5IJ]) colName='0;36';;
+		[kl6KL]) colName='0;37';;
+		[mn7MN]) colName='1;30';;
+		[op8OP]) colName='1;31';;
+		[qr9QR]) colName='1;32';;
+		[st~ST]) colName='1;33';;
+		[uvEV]) colName='1;34';;
+		[wxWX]) colName='1;35';;
+		[yzYZ]) colName='1;36';;
 	esac
 	echo $colName
 }

@@ -1,6 +1,6 @@
-export  PATH="/usr/local/mysql/bin:$PATH"
-export  PATH="~/bin:$PATH"
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="~/bin:$PATH"
+export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 
 if [ -f ~/.drush_bashrc ] ; then
 	. ~/.drush_bashrc
@@ -11,6 +11,7 @@ source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
 
+alias emerge='emerge --ask --verbose'
 alias less='less -msr'
 alias ls='ls -GA'
 alias ln='ln -sv'
@@ -18,7 +19,7 @@ alias ssh='ssh -y -c blowfish'
 alias rm='rm -v'
 alias restart='sudo shutdown -r now'
 alias rsync='rsync --update --compress --copy-links'
-alias wget='wget --timestamping --no-verbose --no-clobber --continue --no-host-directories --no-cache --no-check-certificate --convert-links --page-requisites'
+alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 # acoc block
 if [ -f ~/.acoc.conf ]; then
 	alias ping='acoc ping -c 10 -i 0.1'
