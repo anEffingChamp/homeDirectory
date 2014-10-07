@@ -12,7 +12,7 @@ source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
 
 alias emerge='emerge --ask --verbose'
-alias grcat='grcat ~/.grcat'
+alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -A --color=auto'
