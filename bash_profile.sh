@@ -18,6 +18,7 @@ alias ln='ln -sv'
 alias ssh='ssh -y -c blowfish'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links'
+alias tar='tar --create --update --bzip2 --verbose --file --keep-newer-files --recursion --totals --verify'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 # shutdown
 alias restart='sudo shutdown -r now'
