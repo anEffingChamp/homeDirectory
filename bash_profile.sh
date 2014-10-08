@@ -1,4 +1,3 @@
-export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
@@ -10,12 +9,14 @@ fi
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
+MYSQL_PS1='\w:\R\m \u@\h:\d '
 
 alias emerge='emerge --ask --verbose'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -A --color=auto'
+alias mysql='mysql --compress --reconnect --safe-updates'
 alias ssh='ssh -y -c blowfish'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links'
