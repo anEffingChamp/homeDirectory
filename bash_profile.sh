@@ -1,6 +1,6 @@
 export PATH="/usr/local/mysql/bin:$PATH"
-export PATH="~/bin:$PATH"
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
+export PATH="~/bin:$PATH"
 
 if [ -f ~/.drush_bashrc ] ; then
 	. ~/.drush_bashrc
@@ -24,6 +24,7 @@ alias wget='wget --timestamping --no-verbose --continue --no-host-directories --
 alias ping='ping -c 10 -i 0.1'
 alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 alias traceroute='traceroute -nw 1'
+alias type='type -a'
 alias w='w -i'
 if [ $(uname) == 'Darwin' ]; then
 	alias ls='ls -GA'
