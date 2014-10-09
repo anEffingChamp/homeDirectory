@@ -9,7 +9,7 @@ fi
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
-MYSQL_PS1='\w:\R\m \u@\h:\d '
+PS_PERSONALITY='linux'
 
 alias emerge='emerge --ask --verbose'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
@@ -23,11 +23,13 @@ alias rsync='rsync --update --compress --copy-links'
 alias tar='tar --create --update --bzip2 --verbose --file --keep-newer-files --recursion --totals --verify'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 alias ping='ping -c 10 -i 0.1'
+alias ps='ps -AjHLm'
 alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
 if [ $(uname) == 'Darwin' ]; then
 	alias ls='ls -GA'
+	alias ps='ps axjSm'
 	alias w='w -i'
 fi
 # shutdown
