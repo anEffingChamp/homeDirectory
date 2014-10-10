@@ -7,7 +7,11 @@ function contactColor {
 	if [ $1 != $PWD ]; then
 		szString=$($1)
 	fi
-	szString=${szString:0:1}
+	if [ $1 == gitBranch ]; then
+		szString=${szString:1:1}
+	else
+		szString=${szString:0:1}
+	fi
 	case $szString in
 		[ab1AB]) colName='0;31';;
 		[cd2CD]) colName='0;33';;
