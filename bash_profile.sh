@@ -11,7 +11,7 @@ source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\]$(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 
-alias emerge='emerge --ask --verbose'
+alias emerge='emerge --ask'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias less='less -msr'
 alias ln='ln -sv'
@@ -35,7 +35,9 @@ fi
 # shutdown
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
-alias powerOff='sudo shutdown -p now'
+alias poweroff='sudo shutdown -p now'
+# git
+alias gitamend='git commit -a --amend'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment

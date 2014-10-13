@@ -1,5 +1,9 @@
+# design files
 *.indd
 *.psd
+# dependency management
+bower_components/
+.sass-cache/
 
 # Compiled source #
 ###################
