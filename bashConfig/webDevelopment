@@ -1,3 +1,5 @@
+alias mysql='mysql --compress --reconnect --safe-updates'
+alias mysqldump='mysqldump --opt'
 # http://www.hpl.hp.com/research/linux/httperf/httperf-man-0.9.txt
 alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
 alias sass-update='sass --update -t compressed .'
