@@ -1,8 +1,8 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
-if [ -f ~/.drush_bashrc ] ; then
-	. ~/.drush_bashrc
+if [ -f ~/.bower_components/drushBashProfile/index.bashrc ] ; then
+	. ~/.bower_components/drushBashProfile/index.bashrc
 	. ~/bin/drush.complete.sh
 fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
