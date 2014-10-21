@@ -1,0 +1,5 @@
+if [ $(uname) == 'Darwin' ]; then
+	alias ls='ls -GA'
+	alias ps='ps axjSm'
+	alias w='w -i'
+fi

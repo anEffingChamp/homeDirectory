@@ -1,4 +1,5 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
 if [ -f ~/.bower_components/drushBashProfile/index.bashrc ] ; then
@@ -29,11 +30,6 @@ alias ps='ps -AjHLm'
 alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
-if [ $(uname) == 'Darwin' ]; then
-	alias ls='ls -GA'
-	alias ps='ps axjSm'
-	alias w='w -i'
-fi
 # shutdown
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
@@ -43,13 +39,17 @@ alias gitamend='git commit -a --amend'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment
+#	source ~/.bashConfig/darwin
 fi
 
 # startup routine
-echo -e "\x1B[0;32m$(fortune)\033[m"
+if [ -x fortune ]; then
+	echo -e "\x1B[0;32m$(fortune)\033[m"
+fi
 echo ''
 w
 echo ''
-ls
+if [ $(uname) != 'Darwin' ]; then
+	ls
+fi
 echo ''
-
