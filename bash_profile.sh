@@ -9,7 +9,7 @@ fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
-PS1='$(date +%a%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\]$(gitBranch) \[\e[m\]'
+PS1='$(date +%a%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep'
@@ -19,7 +19,7 @@ fi
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias less='less -msr'
 alias ln='ln -sv'
-alias ls='ls -A --color=auto'
+alias ls='ls -A --color=always'
 alias ssh='ssh -y -c blowfish'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links'
