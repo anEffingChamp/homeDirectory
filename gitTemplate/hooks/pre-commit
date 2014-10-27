@@ -49,4 +49,12 @@ fi
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
 
-php.sh
+# Check two levels deep, and lint PHP files for syntax errors.
+aryType="*php
+**/*php
+**/**/*php"
+for szType in $aryType; do
+if [ -f $szType ]; then
+	php -l $szType
+fi
+done
