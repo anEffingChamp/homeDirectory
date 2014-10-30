@@ -12,6 +12,8 @@ source ~/.bashConfig/gitBranch.sh
 PS1='$(date +%a%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 
+# Always remember that if you ever have a problem with an alias, you can send a command unaltered directly
+# to the binary, eg /bin/ls --help
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 if [ -x lftp ]; then
 	alias ftp='lftp'
