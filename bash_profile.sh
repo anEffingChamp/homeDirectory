@@ -9,7 +9,7 @@ fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
-PS1='\n$(date +%a%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
+PS1='\n$(date +%a)$(w | grep --max-count=1 load )\n\[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 
 # Always remember that if you ever have a problem with an alias, you can send a command unaltered directly
@@ -48,8 +48,6 @@ fi
 if [ -x fortune ]; then
 	echo -e "\x1B[0;32m$(fortune)\033[m"
 fi
-echo ''
-w
 echo ''
 if [ $(uname) != 'Darwin' ]; then
 	ls
