@@ -14,6 +14,7 @@ PS_PERSONALITY='linux'
 
 # Always remember that if you ever have a problem with an alias, you can send a command unaltered directly
 # to the binary, eg /bin/ls --help
+alias ":e"='vim'
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 if [ -x lftp ]; then
 	alias ftp='lftp'
