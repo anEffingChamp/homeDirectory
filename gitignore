@@ -3,6 +3,7 @@
 *.psd
 # dependency management
 bower_components/
+dev/
 .sass-cache/
 node_modules/
 

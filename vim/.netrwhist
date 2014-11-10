@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/jonathan/github/nginxConfiguration.git'
-let g:netrw_dirhist_2='/private/etc/apache2/extra'
-let g:netrw_dirhist_3='/Users/jonathan/github/homeDirectory.git/bashConfig'
-let g:netrw_dirhist_4='/Users/jonathan/github/homeDirectory.git'
-let g:netrw_dirhist_5='/opt/local/etc/portage/make.profile'
-let g:netrw_dirhist_6='/Users/jonathan/github/homeDirectory.git/bashConfig'
-let g:netrw_dirhist_7='/Users/jonathan/github/homeDirectory.git'
-let g:netrw_dirhist_8='/Users/jonathan/github/homeDirectory.git/bashConfig'
-let g:netrw_dirhist_9='/Users/jonathan/Documents/Sametz/mitGlobal.git/global_theme/templates'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/jonathan/github/homeDirectory.git/bashConfig'
+let g:netrw_dirhist_2='/Users/jonathan/Documents/Sametz/nfpNFPA/nfp'
