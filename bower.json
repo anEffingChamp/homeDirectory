@@ -19,6 +19,7 @@
   "dependencies": {
 	  "drushBashProfile": "http://drush.ws/examples/example.bashrc",
 	  "grcat": "https://github.com/jonathan-smalls-cc/grcat.git",
+	  "pacapt": "https://github.com/icy/pacapt/raw/ng/pacapt",
 	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752",
 	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394",
 	  "vimrc": "https://github.com/amix/vimrc.git",
