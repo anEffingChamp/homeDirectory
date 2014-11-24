@@ -1,6 +1,7 @@
 source ~/.bower_components/vimrc/vimrcs/basic.vim
 source ~/.bower_components/vimrc/vimrcs/filetypes.vim
 source ~/.bower_components/vimrc/vimrcs/extended.vim
+execute pathogen#infect()
 
 set shiftwidth=4
 set tabstop=4
