@@ -23,6 +23,7 @@
 	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752",
 	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394",
 	  "vimrc": "https://github.com/amix/vimrc.git",
-	  "vimLess": "https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim"
+	  "vimLess": "https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim",
+	  "vimTidyUp": "https://github.com/mstahl/vim-tidy-up.git"
   }
 }
