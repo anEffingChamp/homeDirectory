@@ -1,6 +1,6 @@
 {
-  "name": "homeDirectory",
-  "version": "0.0.0",
+  "name":       "homeDirectory",
+  "version":    "0.0.0",
   "moduleType": [
     "node",
     "yui"
@@ -8,22 +8,20 @@
   "authors": [
     "Jonathan Smalls"
   ],
-  "license": "MIT",
+  "license":  "MIT",
   "homepage": "http://smalls.cc",
-  "private": true,
-  "ignore": [
+  "private":  true,
+  "ignore":   [
     "**/.*",
     "node_modules",
     "bower_components"
   ],
   "dependencies": {
 	  "drushBashProfile": "http://drush.ws/examples/example.bashrc",
-	  "grcat": "https://github.com/jonathan-smalls-cc/grcat.git",
-	  "pacapt": "https://github.com/icy/pacapt/raw/ng/pacapt",
-	  "superTab": "http://www.vim.org/scripts/download_script.php?src_id=21752",
-	  "vimNginx": "http://www.vim.org/scripts/download_script.php?src_id=19394",
-	  "vimrc": "https://github.com/amix/vimrc.git",
-	  "vimLess": "https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim",
-	  "vimTidyUp": "https://github.com/mstahl/vim-tidy-up.git"
+	  "grcat":            "https://github.com/jonathan-smalls-cc/grcat.git",
+	  "pacapt":           "https://github.com/icy/pacapt/raw/ng/pacapt",
+	  "vimLess":          "https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim",
+	  "vimNginx":         "http://www.vim.org/scripts/download_script.php?src_id=19394",
+	  "vimrc":            "https://github.com/amix/vimrc.git"
   }
 }
