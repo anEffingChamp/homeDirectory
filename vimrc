@@ -4,8 +4,10 @@ source ~/.bower_components/vimrc/vimrcs/extended.vim
 
 " https://github.com/junegunn/vim-plug
 call plug#begin( '~/.vim/plugged' )
-Plug 'https://github.com/junegunn/vim-easy-align.git'
-Plug 'https://github.com/ervandew/supertab.git'
+	Plug 'https://github.com/junegunn/vim-easy-align.git'
+	Plug 'https://github.com/ervandew/supertab.git'
+	Plug 'https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim'
+	Plug 'http://www.vim.org/scripts/download_script.php?src_id=19394'
 call plug#end()
 
 

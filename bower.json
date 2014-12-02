@@ -20,8 +20,7 @@
 	  "drushBashProfile": "http://drush.ws/examples/example.bashrc",
 	  "grcat":            "https://github.com/jonathan-smalls-cc/grcat.git",
 	  "pacapt":           "https://github.com/icy/pacapt/raw/ng/pacapt",
-	  "vimLess":          "https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim",
-	  "vimNginx":         "http://www.vim.org/scripts/download_script.php?src_id=19394",
+	  "vimPlug":		  "https://github.com/junegunn/vim-plug.git",
 	  "vimrc":            "https://github.com/amix/vimrc.git"
   }
 }
