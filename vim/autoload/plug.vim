@@ -1,1 +1,1 @@
-/Users/jonathan/.bower_components/vimPlug/plug.vim
+../../bower_components/vimPlug/plug.vim

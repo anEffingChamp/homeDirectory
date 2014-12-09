@@ -1,6 +1,6 @@
-source ~/.bower_components/vimrc/vimrcs/basic.vim
-source ~/.bower_components/vimrc/vimrcs/filetypes.vim
-source ~/.bower_components/vimrc/vimrcs/extended.vim
+source bower_components/vimrc/vimrcs/basic.vim
+source bower_components/vimrc/vimrcs/filetypes.vim
+source bower_components/vimrc/vimrcs/extended.vim
 
 " https://github.com/junegunn/vim-plug
 call plug#begin( '~/.vim/plugged' )
