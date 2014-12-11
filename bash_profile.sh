@@ -12,6 +12,7 @@ source ~/.bashConfig/gitBranch.sh
 PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
 PS1=$PS1'\[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
+EDITOR='vim'
 
 # Always remember that if you ever have a problem with an alias, you can send a command unaltered directly
 # to the binary, eg /bin/ls --help
@@ -21,10 +22,11 @@ if [ -x lftp ]; then
 	alias ftp='lftp'
 fi
 alias grcat='grcat ~/.bower_components/grcat/grcat'
+alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -A --color=always'
-alias ssh='ssh -y -c blowfish'
+alias ssh='ssh -y -c blowfish -C'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links --verbose'
 alias tar='tar --create --update --bzip2 --verbose --file --keep-newer-files --recursion --totals --verify'
