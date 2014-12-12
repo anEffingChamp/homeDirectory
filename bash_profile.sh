@@ -19,8 +19,8 @@ PS1=$PS1'\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
-# Always remember that if you ever have a problem with an alias, you can send a command unaltered directly
-# to the binary, eg /bin/ls --help
+# Always remember that if you ever have a problem with an alias, you can send a
+# command unaltered directly to the binary, eg /bin/ls --help
 alias ":e"='vim'
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 if [ -x lftp ]; then

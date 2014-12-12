@@ -20,3 +20,5 @@ set autowriteall
 
 set <Home>=[29~
 set <End>=[31~
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
