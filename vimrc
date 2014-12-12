@@ -10,9 +10,9 @@ call plug#begin( '~/.vim/plugged' )
 	Plug 'http://www.vim.org/scripts/download_script.php?src_id=19394'
 call plug#end()
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set noexpandtab
 set smartindent
 set number
