@@ -4,5 +4,8 @@
 # a command, and become a command line master.
 
 function commandlinefu {
-	wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed -n '1d; /./p'
+	szTimeStamp=$(date +%s)
+	if [[ ${szTimeStamp:9:1 } == '5' || ${szTimeStamp:9:1 } == '0' ]]; then
+		wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed -n '1d; /./p'
+	fi
 }
