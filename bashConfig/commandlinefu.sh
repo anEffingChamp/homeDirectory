@@ -5,4 +5,6 @@
 
 #nLine=$(( RANDOM%$( wc -l $aryList )+1 ))
 #aryList=$( head -$(nLine) | tail -2 )
-curl -s "http://www.commandlinefu.com/commands/browse/sort-by-votes/plaintext" | grep -A1 '^#' | grep -v commandlinefu.com | head -$(( RANDOM%25+1 )) | tail -2
+szLast='ssh'
+szLast64=$( echo -n $szLast | openssl base64 )
+curl -s "http://www.commandlinefu.com/commands/matching/NULL/$szLast64/plaintext" | grep -A1 '^#' | grep -v commandlinefu.com | head -$(( RANDOM%25+1 )) | tail -2
