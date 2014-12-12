@@ -11,8 +11,11 @@ source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
 source ~/.bashConfig/commandlinefu.sh
 #PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
-PS1='\[\e[1;30m\]$(commandlinefu)\n'
-PS1=$PS1'\[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
+PS1='\[\e[1;30m\]$(commandlinefu)'
+PS1=$PS1'\[\e[$(contactColor whoami)m\]\u@'
+PS1=$PS1'\[\e[$(contactColor hostname)m\]\h:'
+PS1=$PS1'\[\e[$(contactColor $PWD)m\]\w'
+PS1=$PS1'\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
