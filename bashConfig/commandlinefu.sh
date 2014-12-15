@@ -5,8 +5,9 @@
 
 function commandlinefu {
 	szTimeStamp=$(date +%s)
-	if [[ ${szTimeStamp:9:1 } == '5' \
+	if [[ ${szTimeStamp:9:1 } == '3' \
 	|| ${szTimeStamp:9:1 } == '0' \
+	|| ${szTimeStamp:9:1 } == '6' \
 	]]; then
 		wget -qO - http://www.commandlinefu.com/commands/random/plaintext \
 			| sed -n '1d; /./p'
