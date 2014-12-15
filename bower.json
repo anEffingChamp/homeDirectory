@@ -17,10 +17,9 @@
     "bower_components"
   ],
   "dependencies": {
-	  "drushBashProfile": "http://drush.ws/examples/example.bashrc",
-	  "grcat":            "https://github.com/jonathan-smalls-cc/grcat.git",
-	  "pacapt":           "https://github.com/icy/pacapt/raw/ng/pacapt",
-	  "vimPlug":		  "https://github.com/junegunn/vim-plug.git",
-	  "vimrc":            "https://github.com/amix/vimrc.git"
+		"fortune": "https://github.com/bmc/fortunes",
+	  "pacapt":  "https://github.com/icy/pacapt/raw/ng/pacapt",
+	  "vimPlug": "https://github.com/junegunn/vim-plug.git",
+	  "vimrc":   "https://github.com/amix/vimrc.git"
   }
 }
