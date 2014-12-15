@@ -2,10 +2,6 @@ export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
-if [ -f ~/.bower_components/drushBashProfile/index.bashrc ] ; then
-	. ~/.bower_components/drushBashProfile/index.bashrc
-	. ~/bin/drush.complete.sh
-fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
