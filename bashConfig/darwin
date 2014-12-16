@@ -1,5 +1,6 @@
 if [ $(uname) == 'Darwin' ]; then
 	alias ls='ls -GA'
 	alias ps='ps axjSm'
+	alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 	alias w='w -i'
 fi
