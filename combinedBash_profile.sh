@@ -2,10 +2,6 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
-if [ -f ~/.drush_bashrc ] ; then
-	. ~/.drush_bashrc
-	. ~/bin/drush.complete.sh
-fi
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 function contactColor {
 	szString=$1
@@ -36,35 +32,42 @@ function gitBranch {
 }
 PS1='$(date +%a:%H%M) \[\e[$(contactColor whoami)m\]\u@\[\e[$(contactColor hostname)m\]\h:\[\e[$(contactColor $PWD)m\]\w\[\e[1;35m\]$(gitBranch) \[\e[m\]'
 
-alias emerge='emerge --ask --verbose'
+# Always remember that if you ever have a problem with an alias, you can send a
+# command unaltered directly to the binary, eg /bin/ls --help
+alias ":e"='vim'
+alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+if [ -x lftp ]; then
+	alias ftp='lftp'
+fi
 alias grcat='grcat ~/.bower_components/grcat/grcat'
+alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
-alias ls='ls -A --color=auto'
-alias ssh='ssh -y -c blowfish'
+alias ls='ls -A --color=always'
+alias ssh='ssh -y -c blowfish -C'
 alias rm='rm -v'
-alias rsync='rsync --update --compress --copy-links'
+alias rsync='rsync --update --compress --copy-links --verbose'
 alias tar='tar --create --update --bzip2 --verbose --file --keep-newer-files --recursion --totals --verify'
+alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
-alias ping='ping -c 10 -i 0.1'
-alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
+alias ping='ping -c 10 -i 0.2'
+alias ps='ps -AjHLm'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
-if [ $(uname) == 'Darwin' ]; then
-	alias ls='ls -GA'
-	alias w='w -i'
-fi
 # shutdown
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
-alias powerOff='sudo shutdown -p now'
+alias poweroff='sudo shutdown -p now'
+# git
+alias gitamend='git commit -a --amend'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment
+#	source ~/.bashConfig/darwin
 fi
 
 # startup routine
-echo -e "\x1B[0;32m$(fortune)\033[m"
+wget -qO ~/.bash_profile https://raw.githubusercontent.com/anEffingChamp/homeDirectory/master/combinedBash_profile.sh
 echo ''
 w
 echo ''
