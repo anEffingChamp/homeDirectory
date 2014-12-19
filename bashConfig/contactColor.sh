@@ -5,7 +5,7 @@
 function contactColor {
 	szString=$1
 	szString=${szString##*/}
-	if [ $1 == gitBranch ]; then
+	if [ "$1" == "$( gitBranch )" -o "$1" == "$( date +%k )" ]; then
 		szString=${szString:1:1}
 	else
 		szString=${szString:0:1}
