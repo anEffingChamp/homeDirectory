@@ -4,9 +4,6 @@
 function contactColor {
 	szString=$1
 	szString=${szString##*/}
-	if [ $1 != $PWD ]; then
-		szString=$($1)
-	fi
 	if [ $1 == gitBranch ]; then
 		szString=${szString:1:1}
 	else

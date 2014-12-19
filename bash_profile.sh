@@ -7,17 +7,19 @@ source ~/.bashConfig/contactColor.sh
 source ~/.bashConfig/gitBranch.sh
 source ~/.bashConfig/commandlinefu.sh
 #PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
-PS1='\[\e[1;30m\]$(commandlinefu) \n'
-PS1=$PS1'\[\e[$( contactColor date )m\]$( date +%a%H%M ) '
-PS1=$PS1'\[\e[$(contactColor whoami)m\]\u@'
-PS1=$PS1'\[\e[$(contactColor hostname)m\]\h:'
-PS1=$PS1'\[\e[$(contactColor $PWD)m\]\w'
-PS1=$PS1'\[\e[$(contactColor gitBranch)m\] $(gitBranch) \[\e[m\]'
+PS1='\[\e[1;30m\]'$( commandlinefu )'\n'
+PS1=$PS1'\[\e[$( contactColor '$(date +%k )' )m\]'$( date +%a%H%M )' '
+PS1=$PS1'\[\e[$( contactColor '$( whoami )' )m\]\u@'
+PS1=$PS1'\[\e[$( contactColor '$( hostname )' )m\]\h:'
+PS1=$PS1'\[\e[$( contactColor '$PWD' )m\]\w'
+PS1=$PS1'\[\e[$( contactColor '$( gitBranch )' )m\] '$( gitBranch )' \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
 # Always remember that if you ever have a problem with an alias, you can send a
-# command unaltered directly to the binary, eg /bin/ls --help
+# command unaltered directly to the binary, eg
+#		/bin/ls --help
+#		\$alias --help
 alias ":e"='vim'
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 if [ -x lftp ]; then
