@@ -1,6 +1,7 @@
 # You may wonder why I go through all of this trouble. If you manage multiple
-# servers then you can never have enough cues to visually distinguish them. Color
-# that prompt, baby. The first letter determines the color to give another indication.
+# servers then you can never have enough cues to visually distinguish them.
+# Color that prompt, baby. The first letter determines the color to give another
+# indication.
 function contactColor {
 	szString=$1
 	szString=${szString##*/}
