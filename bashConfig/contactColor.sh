@@ -4,12 +4,11 @@
 # indication.
 function contactColor {
 	szString=$1
+# Cut to the last directory if this is the working directory.
 	szString=${szString##*/}
-	if [ "$1" == "$( gitBranch )" -o "$1" == "$( date +%k )" ]; then
-		szString=${szString:1:1}
-	else
-		szString=${szString:0:1}
-	fi
+# Cut out parentheses if this is a git branch.
+	szString=${szString##*(}
+	szString=${szString:0:1}
 	case $szString in
 		[ab1AB]) colName='0;31';;
 		[cd2CD]) colName='0;33';;

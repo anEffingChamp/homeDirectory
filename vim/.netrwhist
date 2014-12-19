@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/jonathan/github/homeDirectory.git/bashConfig'
-let g:netrw_dirhist_2='/Users/jonathan/Documents/Sametz/nfpNFPA/nfp'
-let g:netrw_dirhist_3='/Users/jonathan/Documents/Sametz/nfpNFPA'
-let g:netrw_dirhist_4='/Users/jonathan/Documents/Sametz/nfpNFPA/nfpNFPA/nfpNFPA'
-let g:netrw_dirhist_5='/Users/jonathan/github/homeDirectory.git/bower_components/vimAlign'
-let g:netrw_dirhist_6='/Users/jonathan/repositories/homeDirectory.git/bashConfig'
-let g:netrw_dirhist_7='/Users/jonathan/repositories/homeDirectory.git'
-let g:netrw_dirhist_8='/Users/jonathan/repositories/homeDirectory.git/bashConfig'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/jonathan/repositories/homeDirectory.git/bashConfig'
+let g:netrw_dirhist_2='/Users/jonathan/repositories'
+let g:netrw_dirhist_3='/Users/jonathan/repositories/homeDirectory.git'
+let g:netrw_dirhist_4='/Users/jonathan/repositories'
+let g:netrw_dirhist_5='/Users/jonathan/repositories/homeDirectory.git/bashConfig'
