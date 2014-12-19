@@ -58,3 +58,12 @@ if [ -f $szType ]; then
 	php -l $szType
 fi
 done
+# Check two levels deep for CSS.
+aryType="*.css
+**/*.css
+**/**/*.css"
+for szType in $aryType; do
+if [ -f $szType ]; then
+	csslint --quiet --ignore=box-model,ids $szType
+fi
+done
