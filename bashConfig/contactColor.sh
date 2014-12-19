@@ -8,6 +8,10 @@ function contactColor {
 	szString=${szString##*/}
 # Cut out parentheses if this is a git branch.
 	szString=${szString##*(}
+	if [ "$1" == "$( date +%k )" ]; then
+		nLength=$(( ${#szString} - 1 ))
+		szString=${szString:$nLength:1}
+	fi
 	szString=${szString:0:1}
 	case $szString in
 		[ab1AB]) colName='0;31';;

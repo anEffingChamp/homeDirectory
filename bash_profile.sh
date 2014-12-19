@@ -12,7 +12,7 @@ PS1=$PS1'\[\e[$( contactColor '$( date +%k )' )m\]$( date +%a%H%M ) '
 PS1=$PS1'\[\e[$( contactColor '$( whoami )' )m\]\u@'
 PS1=$PS1'\[\e[$( contactColor '$( hostname )' )m\]\h:'
 PS1=$PS1'\[\e[$( contactColor $PWD )m\]\w'
-PS1=$PS1'\[\e[$( contactColor '$( gitBranch )' )m\] $( gitBranch ) \[\e[m\]'
+PS1=$PS1'\[\e[$( contactColor $( gitBranch ) )m\] $( gitBranch ) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
