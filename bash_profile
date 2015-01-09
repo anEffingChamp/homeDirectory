@@ -53,11 +53,13 @@ if [ -f ~/.bashConfig/webDevelopment ]; then
 fi
 
 # startup routine
-if [ -x fortune ]; then
+if [ '' != $(which fortune) ]; then
 	echo -e "\x1B[0;32m$(fortune)\033[m"
 fi
-echo ''
 if [ $(uname) != 'Darwin' ]; then
 	ls
 fi
+# This is a good place to run your upgrade script. It is not a huge deal for a
+# local machine you use regularly, but an automatic reminder can help your
+# server.
 echo ''
