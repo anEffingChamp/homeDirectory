@@ -21,10 +21,8 @@ EDITOR='vim'
 #		/bin/ls --help
 #		\ls --help
 alias ":e"='vim'
+alias ":x"='exit'
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
-if [ -x lftp ]; then
-	alias ftp='lftp'
-fi
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias grep='grep --color=always'
 alias less='less -msr'
@@ -32,8 +30,8 @@ alias ln='ln -sv'
 alias ls='ls -A --color=always'
 alias ssh='ssh -y -c blowfish -C'
 alias rm='rm -v'
-alias rsync='rsync --update --compress --copy-links --verbose'
-alias tar='tar --create --update --bzip2 --verbose --file --keep-newer-files --recursion --totals --verify'
+alias rsync='rsync --update --compress --copy-links --verbose --progress --delay-updates'
+alias tar='tar -xzvf'
 alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 alias ping='ping -c 10 -i 0.2'
@@ -62,3 +60,8 @@ if [ 'Thursday' == $(date +%A) ]; then
 	upgradeSoftware.sh
 fi
 ls
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH

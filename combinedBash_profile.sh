@@ -67,7 +67,7 @@ if [ -f ~/.bashConfig/webDevelopment ]; then
 fi
 
 # startup routine
-wget -qO ~/.bash_profile https://raw.githubusercontent.com/anEffingChamp/homeDirectory/master/combinedBash_profile.sh
+curl https://raw.githubusercontent.com/anEffingChamp/homeDirectory/master/combinedBash_profile.sh > ~/.bash_profile
 echo ''
 w
 echo ''
