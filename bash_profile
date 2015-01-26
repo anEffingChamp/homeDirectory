@@ -51,15 +51,17 @@ if [ -f ~/.bashConfig/webDevelopment ]; then
 fi
 
 # startup routine
-if [ '' != $(which fortune) ]; then
-	echo -e "\x1B[0;32m$(fortune)\033[m"
-fi
+if shopt -q login_shell; then
+	if [ '' != $(which fortune) ]; then
+		echo -e "\x1B[0;32m$(fortune)\033[m"
+	fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
-if [ 'Thursday' == $(date +%A) ]; then
-	upgradeSoftware.sh
+	if [ 'Thursday' == $(date +%A) ]; then
+		upgradeSoftware.sh
+	fi
+	ls
 fi
-ls
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
