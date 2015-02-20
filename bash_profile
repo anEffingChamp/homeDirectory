@@ -43,6 +43,7 @@ alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
 alias poweroff='sudo shutdown -p now'
 # git
+alias gitcommit='git add . && git commit -a'
 alias gitamend='git commit -a --amend'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
