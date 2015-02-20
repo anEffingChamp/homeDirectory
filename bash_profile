@@ -36,6 +36,7 @@ alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 alias ping='ping -c 10 -i 0.2'
 alias ps='ps -AjHLm'
+alias supergenpass='supergenpass -p'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
 # shutdown
