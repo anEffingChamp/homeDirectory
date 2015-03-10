@@ -6,8 +6,8 @@ source ~/.bower_components/vimrc/vimrcs/extended.vim
 call plug#begin( '~/.vim/plugged' )
 	Plug 'https://github.com/junegunn/vim-easy-align.git'
 	Plug 'https://github.com/ervandew/supertab.git'
-	Plug 'https://raw.githubusercontent.com/genoma/vim-less/master/syntax/less.vim'
-	Plug 'http://www.vim.org/scripts/download_script.php?src_id=19394'
+	Plug 'https://github.com/genoma/vim-less.git'
+	Plug 'https://github.com/scrooloose/syntastic.git'
 call plug#end()
 
 set shiftwidth=2
@@ -22,3 +22,14 @@ set <Home>=[29~
 set <End>=[31~
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" https://github.com/scrooloose/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_jump = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_html_tidy_exec = 'tidy5'
