@@ -15,7 +15,6 @@ PS1=$PS1'\[\e[$( contactColor $PWD )m\]\w'
 PS1=$PS1'\[\e[$( contactColor $( gitBranch ) )m\] $( gitBranch ) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
-XDG_CONFIG_HOME='~/.config/'
 
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
@@ -45,8 +44,11 @@ alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
 alias poweroff='sudo shutdown -p now'
 # git
-alias gitcommit='git add . && git commit -a'
 alias gitamend='git commit -a --amend'
+alias gitbranch='git show-branch -a --date-order'
+alias gitcommit='git add . && git commit -a'
+alias gitlog='git status | less -msr && git diff && gitbranch | less -msr && git log --stat -p'
+alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment
