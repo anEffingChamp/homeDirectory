@@ -15,6 +15,7 @@ PS1=$PS1'\[\e[$( contactColor $PWD )m\]\w'
 PS1=$PS1'\[\e[$( contactColor $( gitBranch ) )m\] $( gitBranch ) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
+XDG_CONFIG_HOME='~/.config/'
 
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
