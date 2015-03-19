@@ -1,4 +1,5 @@
 #!/bin/bash --
-sass --update -t compressed --no-cache .
+sass --update -t compressed --no-cache . &&
+	csslint style.css
 # grunt
 # mysqldump
