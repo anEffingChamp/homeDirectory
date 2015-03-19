@@ -22,7 +22,7 @@ EDITOR='vim'
 #		\ls --help
 alias ":e"='vim'
 alias ":x"='exit'
-alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias grep='grep --color=always'
 alias less='less -msr'
@@ -62,10 +62,10 @@ if shopt -q login_shell; then
 	fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
-	if [ 'Thursday' == $(date +%A) ]; then
-		upgradeSoftware.sh
-	fi
 	ls
+	if [ 'Thursday' == $(date +%A) ]; then
+		echo -e "			\x1B[0;31mHave you run your updates today?\033[m"
+	fi
 fi
 
 # Setting PATH for Python 3.4
