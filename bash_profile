@@ -53,7 +53,6 @@ if [ -f ~/.bashConfig/webDevelopment ]; then
 fi
 
 # startup routine
-if shopt -q login_shell; then
 	if [ '' != $(which fortune) ]; then
 		echo -e "\x1B[0;32m$(fortune)\033[m"
 	fi
@@ -63,7 +62,7 @@ if shopt -q login_shell; then
 		upgradeSoftware.sh
 	fi
 	ls
-fi
+
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
