@@ -1,4 +1,0 @@
-#!/bin/bash --
-sass --update -t compressed --no-cache .
-# grunt
-# mysqldump

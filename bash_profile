@@ -44,8 +44,11 @@ alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
 alias poweroff='sudo shutdown -p now'
 # git
-alias gitcommit='git add . && git commit -a'
 alias gitamend='git commit -a --amend'
+alias gitbranch='git show-branch -a --date-order'
+alias gitcommit='git add . && git commit -a'
+alias gitlog='git status | less -msr && git diff && gitbranch | less -msr && git log --stat -p'
+alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.bashConfig/webDevelopment ]; then
 	source ~/.bashConfig/webDevelopment
