@@ -3,9 +3,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
-source ~/.bashConfig/contactColor.sh
-source ~/.bashConfig/gitBranch.sh
-source ~/.bashConfig/commandlinefu.sh
+source ~/.config/bash/contactColor.sh
+source ~/.config/bash/gitBranch.sh
+source ~/.config/bash/commandlinefu.sh
 #PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
 PS1='\[\e[1;30m\]$( commandlinefu )'
 PS1=$PS1'\[\e[$( contactColor '$( date +%k )' )m\]$( date +%a%H%M ) '
@@ -50,9 +50,9 @@ alias gitcommit='git add . && git commit -a'
 alias gitlog='git status | less -msr && git diff && gitbranch | less -msr && git log --stat -p'
 alias gitrebase='git rebase -i'
 # external configuration
-if [ -f ~/.bashConfig/webDevelopment ]; then
-	source ~/.bashConfig/webDevelopment
-#	source ~/.bashConfig/darwin
+if [ -f ~/.config/bash/webDevelopment ]; then
+	source ~/.config/bash/webDevelopment
+#	source ~/.config/bash/darwin
 fi
 
 # startup routine
