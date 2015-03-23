@@ -1,8 +1,13 @@
 # design files
 *.indd
 *.psd
+# home directory files
+bin
+vim/plugged
 # dependency management
 bower_components/
+.libraries
+libraries
 dev/
 .sass-cache/
 node_modules/
