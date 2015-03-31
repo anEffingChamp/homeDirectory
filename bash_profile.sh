@@ -22,6 +22,7 @@ EDITOR='vim'
 #		\ls --help
 alias ":e"='vim'
 alias ":x"='exit'
+alias bc="bc -l"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias grep='grep --color=always'
