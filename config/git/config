@@ -1,6 +1,6 @@
 [user]
-	email = jonathan@sametz.com
-	name  = git
+	email = jon@smalls.rocks
+	name  = Jonathan Smalls
 [core]
 	editor           = vim
 	autocrlf         = input

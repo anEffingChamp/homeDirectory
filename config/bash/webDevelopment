@@ -1,3 +1,4 @@
+alias csslint='csslint --ignore=box-model'
 alias ifconfig='curl ifconfig.me'
 # http://www.hpl.hp.com/research/linux/httperf/httperf-man-0.9.txt
 alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
@@ -9,3 +10,4 @@ alias npm-install='sudo npm install -g'
 alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
 alias sass='sass --no-cache'
 	alias sass-update='sass --update --style compressed .'
+alias tidy='tidy5 --errors --gnu-emacs yes'

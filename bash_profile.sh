@@ -22,6 +22,7 @@ EDITOR='vim'
 #		\ls --help
 alias ":e"='vim'
 alias ":x"='exit'
+alias bc="bc -l"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias grep='grep --color=always'
@@ -47,6 +48,7 @@ alias poweroff='sudo shutdown -p now'
 alias gitamend='git commit -a --amend'
 alias gitbranch='git show-branch -a --date-order'
 alias gitcommit='git add . && git commit -a'
+alias gitdiff='git diff --minimal --check'
 alias gitlog='git status | less -msr && git diff && gitbranch | less -msr && git log --stat -p'
 alias gitrebase='git rebase -i'
 # external configuration
