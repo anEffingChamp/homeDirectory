@@ -29,6 +29,7 @@ alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -A --color=always'
+alias open="xdg-open"
 alias ssh='ssh -y -c blowfish -C'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links --verbose --progress --delay-updates'
@@ -63,9 +64,6 @@ fi
 	fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
-	if [ 'Thursday' == $(date +%A) ]; then
-		upgradeSoftware.sh
-	fi
 	ls
 
 
