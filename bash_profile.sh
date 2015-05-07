@@ -7,8 +7,7 @@ source ~/.config/bash/contactColor.sh
 source ~/.config/bash/gitBranch.sh
 source ~/.config/bash/commandlinefu.sh
 #PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
-PS1='\[\e[1;30m\]$( commandlinefu )'
-PS1=$PS1'\[\e[$( contactColor '$( date +%k )' )m\]$( date +%a%H%M ) '
+PS1='\[\e[$( contactColor '$( date +%k )' )m\]$( date +%a%H%M ) '
 PS1=$PS1'\[\e[$( contactColor '$( whoami )' )m\]\u@'
 PS1=$PS1'\[\e[$( contactColor '$( hostname )' )m\]\h:'
 PS1=$PS1'\[\e[$( contactColor $PWD )m\]\w'
@@ -24,7 +23,6 @@ alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
-alias grcat='grcat ~/.bower_components/grcat/grcat'
 alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
@@ -38,13 +36,16 @@ alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
-alias supergenpass='supergenpass -p'
+function supergenpass(){
+	/usr/bin/supergenpass -p "$@" | xclip -selection clipboard;
+}
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
 # shutdown
+alias systemupgrade='sudo zypper up && sudo npm upgrade -g'
+alias poweroff='sudo shutdown -p now'
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
-alias poweroff='sudo shutdown -p now'
 # git
 alias gitamend='git commit -a --amend'
 alias gitbranch='git show-branch -a --date-order'
