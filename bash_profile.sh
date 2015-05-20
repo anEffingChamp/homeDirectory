@@ -37,7 +37,9 @@ alias wget='wget --timestamping --no-verbose --continue --no-host-directories --
 alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
 function supergenpass(){
-	/usr/bin/supergenpass -p "$@" | xclip -selection clipboard;
+	echo -n "Enter password. "
+	stty -echo; read szPass; stty echo; echo
+	/usr/bin/supergenpass -p $szPass "$@" | xclip -selection clipboard;
 }
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
