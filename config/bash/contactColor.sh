@@ -23,8 +23,8 @@ function contactColor {
 		[mn7MN]) colName='1;30';;
 		[op8OP]) colName='1;31';;
 		[qr9QR]) colName='1;32';;
-		[st~ST]) colName='1;33';;
-		[uvEV]) colName='1;34';;
+		[st0ST]) colName='1;33';;
+		[uv~EV]) colName='1;34';;
 		[wxWX]) colName='1;35';;
 		[yzYZ]) colName='1;36';;
 	esac
