@@ -51,3 +51,6 @@ do
 done
 
 exit 0
+
+rm style.css &&
+	sass --update -t compressed .
