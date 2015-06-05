@@ -28,7 +28,7 @@ alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -A --color=always'
 alias open="xdg-open"
-alias ssh='ssh -y -c blowfish -C'
+alias ssh='ssh -A -Y -c blowfish -C'
 alias rm='rm -v'
 alias rsync='rsync --update --compress --copy-links --verbose --progress --delay-updates'
 alias tar='tar -xzvf'
