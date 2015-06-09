@@ -1,14 +1,9 @@
 #!/bin/bash --
-# Remove existing files from home directory.
-rm --recursive ~/.bash_profile ~/.bashrc ~/.vim ~/.vimrc ~/.my.cnf
--
-# Link to the repository for easy upgrades.
-aryLinks=( 'bash_profile' 'vimrc' 'my.cnf' 'bin' )
-for szLink in "${aryLinks[@]}"; do
-       ln --symbolic $PWD/$szLink ~/.$szLink
-done
--
-# Install Bower components.
-bower install &&
-vim -c "PlugInstall"
+echo 'Where are your credentials? '; read sServerHome
+sServerHome="$sServerHome:~"
 
+rsync bash_profile.sh $sServerHome/.bash_profile
+aryFiles=(vim config vimrc bowerrc.json my.cnf)
+for sFile in ${aryFiles[*]}; do
+	rsync -r $sFile $sServerHome/.$sFile
+done
