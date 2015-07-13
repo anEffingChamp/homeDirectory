@@ -22,6 +22,7 @@ EDITOR='vim'
 alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
+alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias grep='grep --color=always'
 alias less='less -msr'

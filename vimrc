@@ -18,6 +18,10 @@ set smartindent
 set number
 set autowriteall
 
+syntax on
+filetype on
+au BufNewFile,BufRead *.tpl set filetype=php
+
 set <Home>=[29~
 set <End>=[31~
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
