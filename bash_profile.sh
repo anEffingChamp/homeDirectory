@@ -24,6 +24,11 @@ alias ":x"='exit'
 alias bc="bc -l"
 alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+function genpass(){
+	echo -n "Enter password. "
+	stty -echo; read szPass; stty echo; echo 
+	supergenpass -p $szPass "$@" | xclip -selection clipboard;
+}
 alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
@@ -37,13 +42,9 @@ alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
 alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
-function supergenpass(){
-	echo -n "Enter password. "
-	stty -echo; read szPass; stty echo; echo
-	/usr/bin/supergenpass -p $szPass "$@" | xclip -selection clipboard;
-}
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
+alias zypper='sudo zypper'
 # shutdown
 alias systemupgrade='sudo zypper up && sudo npm upgrade -g'
 alias poweroff='sudo shutdown -p now'
