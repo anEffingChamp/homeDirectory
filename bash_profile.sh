@@ -32,7 +32,7 @@ function genpass(){
 alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'
-alias ls='ls -A --color=always'
+alias ls='ls -Ah --color=always'
 alias open="xdg-open"
 alias ssh='ssh -aYC'
 alias rm='rm -v'
