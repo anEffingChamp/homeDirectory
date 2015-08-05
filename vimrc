@@ -6,6 +6,7 @@ source ~/.libraries/vimrc/vimrcs/extended.vim
 call plug#begin( '~/.vim/plugged' )
 	Plug 'https://github.com/junegunn/vim-easy-align.git'
 	Plug 'https://github.com/ervandew/supertab.git'
+	Plug 'https://github.com/tpope/vim-haml.git'
 	Plug 'https://github.com/genoma/vim-less.git'
 	Plug 'https://github.com/scrooloose/syntastic.git'
 call plug#end()
