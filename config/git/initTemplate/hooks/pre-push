@@ -54,3 +54,4 @@ exit 0
 
 rm style.css &&
 	sass --update -t compressed .
+wget --spider -r -nd -H -l 1 -w 2 -o wget.log http://smalls.rocks &

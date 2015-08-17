@@ -21,7 +21,6 @@ set autowriteall
 
 syntax on
 filetype on
-au BufNewFile,BufRead *.tpl set filetype=php
 
 set <Home>=[29~
 set <End>=[31~
