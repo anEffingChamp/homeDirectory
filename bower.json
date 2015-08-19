@@ -17,8 +17,9 @@
     "bower_components"
   ],
   "dependencies": {
-		"fortune": "git@github.com:bmc/fortunes.git",
-	  "vimPlug": "https://github.com/junegunn/vim-plug.git",
-	  "vimrc":   "https://github.com/amix/vimrc.git"
+		"fortune":    "git@github.com:bmc/fortunes.git",
+		"vimPHP":     "https://github.com/StanAngeloff/php.vim.git",
+	  "vimPlug":    "https://github.com/junegunn/vim-plug.git",
+	  "vimrc":      "https://github.com/amix/vimrc.git"
   }
 }

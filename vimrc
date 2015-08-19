@@ -21,6 +21,8 @@ set autowriteall
 
 syntax on
 filetype on
+let php_html_in_strings=1
+let php_html_in_heredoc=1
 
 set <Home>=[29~
 set <End>=[31~
