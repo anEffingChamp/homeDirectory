@@ -60,7 +60,7 @@ alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.config/bash/webDevelopment ]; then
 	source ~/.config/bash/webDevelopment
-#	source ~/.config/bash/darwin
+	source ~/.config/bash/darwin
 fi
 
 # startup routine
