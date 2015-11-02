@@ -1,4 +1,9 @@
 if [ $(uname) == 'Darwin' ]; then
+	function cdls(){
+		cd $@
+		\ls -GA
+	}
+	alias cd='cdls'
 	function genpass(){
 		echo -n "Enter password. "
 		stty -echo; read szPass; stty echo; echo 
