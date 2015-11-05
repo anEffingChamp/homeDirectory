@@ -33,6 +33,7 @@ function genpass(){
 	stty -echo; read szPass; stty echo; echo 
 	supergenpass -p $szPass "$@" | xclip -selection clipboard;
 }
+alias supergenpass='genpass'
 alias grep='grep --color=always'
 alias less='less -msr'
 alias ln='ln -sv'

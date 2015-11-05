@@ -11,10 +11,10 @@ call plug#begin( '~/.vim/plugged' )
 	Plug 'https://github.com/scrooloose/syntastic.git'
 call plug#end()
 
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set noexpandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
 set smartindent
 set number
 set autowriteall
@@ -39,3 +39,4 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_php_checkers = ['phpcs']
