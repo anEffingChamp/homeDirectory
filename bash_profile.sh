@@ -69,15 +69,9 @@ if [ -f ~/.config/bash/webDevelopment ]; then
 fi
 
 # startup routine
-	if [ '' != $(which fortune) ]; then
+	if ['' != $(which fortune)]; then
 		echo -e "\x1B[0;32m$(fortune)\033[m"
 	fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
 	ls
-
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
