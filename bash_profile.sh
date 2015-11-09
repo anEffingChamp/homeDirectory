@@ -23,10 +23,10 @@ alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
 function cdls(){
-	cd $@
+	cd "$@"
 	ls -Ah --color=always
 }
-alias cd='cdls'
+#alias cd='cdls'
 alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 function genpass(){
