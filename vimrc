@@ -26,6 +26,7 @@ let php_html_in_heredoc=1
 
 set <Home>=[29~
 set <End>=[31~
+set foldmethod=indent
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
@@ -39,4 +40,4 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_php_checkers = ['phpcs']
+let g:syntastic_php_checkers = ['phpcs','php']
