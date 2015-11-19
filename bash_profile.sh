@@ -52,7 +52,7 @@ alias traceroute='traceroute -nw 1'
 alias type='type -a'
 alias zypper='sudo zypper'
 # shutdown
-alias systemupgrade='sudo nice -n 18 zypper up && sudo nice -n 18 npm upgrade -g'
+alias systemupgrade='sudo nice -n 18 npm upgrade -g && sudo nice -n 18 zypper up'
 alias poweroff='sudo shutdown -p now'
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
@@ -70,7 +70,7 @@ if [ -f ~/.config/bash/webDevelopment ]; then
 fi
 
 # startup routine
-	if ['' != $(which fortune)]; then
+	if [ '' != $(which fortune) ]; then
 		echo -e "\x1B[0;32m$(fortune)\033[m"
 	fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
