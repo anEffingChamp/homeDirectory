@@ -27,6 +27,7 @@ let php_html_in_heredoc=1
 set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
+set shell=/bin/bash\ -i
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 

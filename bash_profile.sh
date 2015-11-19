@@ -27,7 +27,7 @@ function cdls(){
 	ls -Ah --color=always
 }
 #alias cd='cdls'
-alias cp='rsync -rzu'
+alias cp='rsync'
 alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 function genpass(){
