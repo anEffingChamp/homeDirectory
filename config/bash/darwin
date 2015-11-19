@@ -1,6 +1,6 @@
 if [ $(uname) == 'Darwin' ]; then
 	function cdls(){
-		cd $@
+		cd "$@"
 		\ls -GA
 	}
 	alias cd='cdls'
