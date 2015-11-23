@@ -8,6 +8,8 @@
 	compression      = -1
 	loosecompression = -1
 	quotepath        = false
+[commit]
+    template = ~/.config/git/gitmessage
 [push]
 	default = current
 [rebase]
