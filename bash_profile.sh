@@ -36,7 +36,7 @@ function genpass(){
 	supergenpass -p $szPass "$@" | xclip -selection clipboard;
 }
 alias supergenpass='genpass'
-alias grep='grep --color=always'
+alias grep='zfgrep --line-number --ignore-case --color=always --recursive -S --exclude-dir=.git'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -Ah --color=always'
