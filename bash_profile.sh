@@ -33,7 +33,8 @@ alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep 
 function genpass(){
 	echo -n "Enter password. "
 	stty -echo; read szPass; stty echo; echo 
-	supergenpass -p $szPass "$@" | xclip -selection clipboard;
+	supergenpass --length 14 --method sha512 -p $szPass "$@" \
+        | xclip -selection clipboard;
 }
 alias supergenpass='genpass'
 alias grep='zfgrep --line-number --ignore-case --color=always --recursive -S --exclude-dir=.git'
@@ -66,9 +67,9 @@ alias gitstatus='git status | less'
 alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p'
 alias gitrebase='git rebase -i'
 # external configuration
-if [ -f ~/.config/bash/webDevelopment ]; then
-	source ~/.config/bash/webDevelopment
-	source ~/.config/bash/darwin
+if [ -f ~/.config/bash/webDevelopment.sh ]; then
+	source ~/.config/bash/webDevelopment.sh
+	source ~/.config/bash/darwin.sh
 fi
 
 # startup routine
