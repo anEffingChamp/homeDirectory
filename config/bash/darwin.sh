@@ -4,11 +4,12 @@ if [ $(uname) == 'Darwin' ]; then
 		\ls -GA
 	}
 	alias cd='cdls'
-#	function genpass(){
-#		echo -n "Enter password. "
-#		stty -echo; read szPass; stty echo; echo 
-#		supergenpass -p $szPass "$@" | pbcopy
-#	}
+    alias chmod='chmod -vv'
+	function genpass(){
+		echo -n "Enter password. "
+		stty -echo; read szPass; stty echo; echo 
+		supergenpass -p $szPass "$@" | pbcopy
+	}
 	alias ls='ls -GA'
     alias open='\open'
 	alias ps='ps axjSm'
