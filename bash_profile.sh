@@ -27,16 +27,18 @@ function cdls(){
 	ls -Ah --color=always
 }
 alias cd='cdls'
+alias chmod='chmod --changes'
 alias cp='rsync'
 alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 function genpass(){
 	echo -n "Enter password. "
 	stty -echo; read szPass; stty echo; echo 
-	supergenpass -p $szPass "$@" | xclip -selection clipboard;
+	supergenpass --length 14 --method sha512 -p $szPass "$@" \
+        | xclip -selection clipboard;
 }
 alias supergenpass='genpass'
-alias grep='grep --color=always'
+alias grep='zfgrep --line-number --ignore-case --color=always --recursive -S --exclude-dir=.git'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -Ah --color=always'
@@ -61,14 +63,14 @@ alias sleep='sudo shutdown -h now'
 alias gitamend='git commit -a --amend'
 alias gitbranch='git show-branch -a --date-order | less'
 alias gitcommit='git add . && git commit -a'
-alias gitdiff='git diff --minimal --check | less'
+alias gitdiff='git diff --minimal --color=always | less'
 alias gitstatus='git status | less'
 alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p'
 alias gitrebase='git rebase -i'
 # external configuration
-if [ -f ~/.config/bash/webDevelopment ]; then
-	source ~/.config/bash/webDevelopment
-	source ~/.config/bash/darwin
+if [ -f ~/.config/bash/webDevelopment.sh ]; then
+	source ~/.config/bash/webDevelopment.sh
+	source ~/.config/bash/darwin.sh
 fi
 
 # startup routine
