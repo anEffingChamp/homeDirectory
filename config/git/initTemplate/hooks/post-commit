@@ -1,5 +1,5 @@
 #!/bin/bash --
-rm style.scss &&
+rm style.css &&
 	sass --update -t compressed --no-cache . &&
 	csslint style.css
 # grunt
