@@ -6,9 +6,9 @@ if [ $(uname) == 'Darwin' ]; then
 	alias cd='cdls'
     alias chmod='chmod -vv'
 	function genpass(){
-		echo -n "Enter password. "
-		stty -echo; read szPass; stty echo; echo 
-		supergenpass -p $szPass "$@" | pbcopy
+		echo -n "Enter password. ";
+		stty -echo; read szPass; stty echo; echo
+        pbcopy <<< $(\supergenpass -p $szPass "$@")
 	}
 	alias ls='ls -GA'
     alias open='\open'
