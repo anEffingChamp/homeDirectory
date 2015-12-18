@@ -1,5 +1,4 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="~/bin:$PATH"
 
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
@@ -55,7 +54,7 @@ alias type='type -a'
 alias zypper='sudo zypper'
 # shutdown
 alias systemupgrade='sudo nice -n 18 zypper up && sudo nice -n 18 npm upgrade -g'
-alias poweroff='sudo shutdown -p now'
+alias poweroff='sudo shutdown -p 60'
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
 # git
@@ -75,9 +74,11 @@ if [ -f ~/.config/bash/webDevelopment.sh ]; then
 fi
 
 # startup routine
-	if ['' != $(which fortune)]; then
-		echo -e "\x1B[0;32m$(fortune)\033[m"
-	fi
+if ['' != $(which fortune)]; then
+    echo -e "\x1B[0;32m$(fortune)\033[m"
+fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
-	ls
+ls
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
