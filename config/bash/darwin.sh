@@ -15,4 +15,6 @@ if [ $(uname) == 'Darwin' ]; then
 	alias ps='ps axjSm'
 	alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
 	alias w='w -i'
+# shutdown
+    poweroff='sudo shutdown -h 60'
 fi
