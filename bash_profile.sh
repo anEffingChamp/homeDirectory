@@ -52,7 +52,7 @@ alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
-alias zypper='sudo zypper'
+alias zypper='sudo zypper --clean-deps'
 # shutdown
 alias systemupgrade='nice -n 18 zypper update \
     && nice -n 18 zypper install-new-recommends \
