@@ -6,11 +6,11 @@ source ~/.config/bash/contactColor.sh
 source ~/.config/bash/gitBranch.sh
 source ~/.config/bash/commandlinefu.sh
 #PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
-PS1='\[\e[$( contactColor '$( date +%k )' )m\]$( date +%a%H%M ) '
-PS1=$PS1'\[\e[$( contactColor '$( whoami )' )m\]\u@'
-PS1=$PS1'\[\e[$( contactColor '$( hostname )' )m\]\h:'
-PS1=$PS1'\[\e[$( contactColor $PWD )m\]\w'
-PS1=$PS1'\[\e[$( contactColor $( gitBranch ) )m\] $( gitBranch ) \[\e[m\]'
+PS1='\[\e[$(contactColor '$(date +%k)')m\]$(date +%a%H%M) '
+PS1=$PS1'\[\e[$(contactColor '$(whoami)')m\]\u@'
+PS1=$PS1'\[\e[$(contactColor '$(hostname)')m\]\h:'
+PS1=$PS1'\[\e[$(contactColor $PWD)m\]\w'
+PS1=$PS1'\[\e[$(contactColor $( gitBranch))m\] $(gitBranch) \[\e[m\]'
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
@@ -52,9 +52,11 @@ alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
-alias zypper='sudo zypper'
+alias zypper='sudo zypper --clean-deps'
 # shutdown
-alias systemupgrade='sudo nice -n 18 zypper up && sudo nice -n 18 npm upgrade -g'
+alias systemupgrade='nice -n 18 zypper update \
+    && nice -n 18 zypper install-new-recommends \
+    && sudo nice -n 18 npm upgrade -g'
 alias poweroff='sudo shutdown -p 60'
 alias restart='sudo shutdown -r now'
 alias sleep='sudo shutdown -h now'
@@ -75,7 +77,7 @@ if [ -f ~/.config/bash/webDevelopment.sh ]; then
 fi
 
 # startup routine
-if ['' != $(which fortune)]; then
+if [ '' != $(which fortune) ]; then
     echo -e "\x1B[0;32m$(fortune)\033[m"
 fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
