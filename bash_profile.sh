@@ -54,12 +54,11 @@ alias traceroute='traceroute -nw 1'
 alias type='type -a'
 alias zypper='sudo zypper'
 # shutdown
-alias systemupgrade='nice -n 18 zypper update \
-    && nice -n 18 zypper install-new-recommends \
+alias systemupgrade='sudo nice -n 18 zypper update \
+    && sudo nice -n 18 zypper install-new-recommends \
     && sudo nice -n 18 npm upgrade -g'
-alias poweroff='sudo shutdown -p 60'
-alias restart='sudo shutdown -r now'
-alias sleep='sudo shutdown -h now'
+alias systemhalt='sudo shutdown -h now'
+alias systemrestart='sudo shutdown -r now'
 # git
 alias gitamend='git commit -a --amend'
 alias gitbranch='git show-branch -a --date-order | less'
