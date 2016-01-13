@@ -30,3 +30,5 @@
 	renames = copy
 [init]
 	templatedir = ~/.config/git/initTemplate
+[credential]
+	helper = cache
