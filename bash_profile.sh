@@ -25,7 +25,7 @@ function cdls(){
 	cd "$@"
 	ls -Ah --color=always
 }
-alias cd='cdls'
+#alias cd='cdls'
 alias chmod='chmod --changes'
 alias cp='rsync'
 alias dd="dd bs=1024k"
