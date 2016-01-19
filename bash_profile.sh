@@ -62,17 +62,12 @@ alias systemrestart='sudo shutdown -r now'
 # git
 alias gitamend='git commit -a --amend'
 alias gitbranch='git show-branch -a --date-order | less'
-alias gitcommit='git add . \
-    && git commit -a'
-alias gitdiff='git diff --minimal --color=always | less'
+alias gitcommit='git add . && git commit'
+alias gitdiff='git diff --ignore-all-space --color=always | less'
 alias gitpull='git pull --stat --all'
-alias gitpush='gitpull \
-    && git push --mirror --force-with-lease --set-upstream'
+alias gitpush='gitpull && git push --mirror --force-with-lease --set-upstream'
 alias gitstatus='git status | less'
-alias gitlog='gitstatus \
-    && gitdiff \
-    && gitbranch \
-    && git log --stat -p'
+alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p'
 alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.config/bash/webDevelopment.sh ]; then
