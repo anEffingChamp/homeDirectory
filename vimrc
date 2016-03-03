@@ -41,3 +41,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_php_checkers = ['phpcs','php']
+let g:syntastic_javascript_checkers = ['jshint']
