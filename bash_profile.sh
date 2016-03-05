@@ -54,9 +54,9 @@ alias traceroute='traceroute -nw 1'
 alias type='type -a'
 alias zypper='sudo zypper'
 # shutdown
-alias systemupgrade='sudo nice -n 18 zypper update \
+alias systemupgrade='sudo nice -n 18 npm upgrade -g \
     && sudo nice -n 18 zypper install-new-recommends \
-    && sudo nice -n 18 npm upgrade -g'
+    && sudo nice -n 18 zypper update'
 alias systemhalt='sudo shutdown -h now'
 alias systemrestart='sudo shutdown -r now'
 # git
