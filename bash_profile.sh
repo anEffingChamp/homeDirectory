@@ -67,7 +67,7 @@ alias gitdiff='git diff --ignore-all-space --color=always | less'
 alias gitpull='git pull --stat --all'
 alias gitpush='gitpull && git push --mirror --force-with-lease --set-upstream'
 alias gitstatus='git status | less'
-alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p'
+alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p --graph'
 alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.config/bash/webDevelopment.sh ]; then
