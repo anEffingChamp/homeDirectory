@@ -6,8 +6,8 @@ source ~/.libraries/vimrc/vimrcs/extended.vim
 call plug#begin( '~/.vim/plugged' )
 	Plug 'https://github.com/junegunn/vim-easy-align.git'
 	Plug 'https://github.com/ervandew/supertab.git'
-	Plug 'https://github.com/tpope/vim-haml.git'
-	Plug 'https://github.com/genoma/vim-less.git'
+    "Plug 'https://github.com/tpope/vim-haml.git'
+	"Plug 'https://github.com/genoma/vim-less.git'
 	Plug 'https://github.com/scrooloose/syntastic.git'
 call plug#end()
 
@@ -27,7 +27,6 @@ let php_html_in_heredoc=1
 set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
-set shell=/bin/bash\ -i
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
