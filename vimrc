@@ -28,7 +28,9 @@ set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight extraWhiteSpace ctermbg=darkgreen guibg=darkgreen
 match OverLength /\%81v.\+/
+match extraWhiteSpace /\s\+$/
 
 " https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
