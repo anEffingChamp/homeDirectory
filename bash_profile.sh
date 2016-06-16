@@ -60,9 +60,9 @@ alias systemupgrade='sudo nice -n 18 npm upgrade -g \
 alias systemhalt='sudo shutdown -h now'
 alias systemrestart='sudo shutdown -r now'
 # git
-alias gitamend='git commit -a --amend'
+alias gitamend='git commit --verbose -a --amend'
 alias gitbranch='git show-branch -a --date-order | less'
-alias gitcommit='git add . && git commit'
+alias gitcommit='git add . && git commit --verbose'
 alias gitdiff='git diff --ignore-all-space --color=always | less'
 alias gitpull='git pull --stat --all'
 alias gitpush='gitpull && git push --force-with-lease --set-upstream'
