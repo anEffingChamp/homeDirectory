@@ -21,6 +21,9 @@ set autowriteall
 set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
+" http://vim.wikia.com/wiki/File_format
+update
+set ff=unix
 
 syntax on
 filetype on
@@ -32,7 +35,6 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 highlight extraWhiteSpace ctermbg=darkgreen guibg=darkgreen
 match OverLength /\%81v.\+/
 match extraWhiteSpace /\s\+$/
-
 " https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
