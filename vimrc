@@ -22,7 +22,6 @@ set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
 " http://vim.wikia.com/wiki/File_format
-update
 set ff=unix
 
 syntax on
