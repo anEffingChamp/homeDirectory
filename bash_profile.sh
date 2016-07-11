@@ -6,9 +6,9 @@ source ~/.config/bash/commandlinefu.sh
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
 LP_PS1_PREFIX="\[\e[$(contactColor '$(date +%a)')m\]$(date +%a)"
+LP_MARK_GIT=''
 PS_PERSONALITY='linux'
 EDITOR='vim'
-
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
 #		/bin/ls --help
