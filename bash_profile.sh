@@ -5,7 +5,7 @@ source ~/.config/bash/contactColor.sh
 source ~/.config/bash/commandlinefu.sh
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
-LP_PS1_PREFIX="\[\e[$(contactColor '$(date +%a)')m\]$(date +%a) "
+LP_PS1_PREFIX="\[\e[$(contactColor '$(date +%a)')m\]$(date +%a)"
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
