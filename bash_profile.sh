@@ -4,12 +4,8 @@ export PATH="~/bin:$PATH"
 source ~/.config/bash/contactColor.sh
 source ~/.config/bash/gitBranch.sh
 source ~/.config/bash/commandlinefu.sh
-#PS1='\[\e[$(contactColor date)m\]$(date +%a)$(w | grep --max-count=1 load )\n'
-PS1='\[\e[$(contactColor '$(date +%k)')m\]$(date +%a%H%M) '
-PS1=$PS1'\[\e[$(contactColor '$(whoami)')m\]\u@'
-PS1=$PS1'\[\e[$(contactColor '$(hostname)')m\]\h:'
-PS1=$PS1'\[\e[$(contactColor $PWD)m\]\w'
-PS1=$PS1'\[\e[$(contactColor $( gitBranch))m\] $(gitBranch) \[\e[m\]'
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
 PS_PERSONALITY='linux'
 EDITOR='vim'
 
