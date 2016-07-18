@@ -2,11 +2,8 @@ export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="~/bin:$PATH"
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.config/bash/contactColor.sh
-source ~/.config/bash/commandlinefu.sh
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
-LP_PS1_PREFIX="\[\e[$(contactColor '$(date +%a)')m\]$(date +%a)"
-LP_MARK_GIT=''
 PS_PERSONALITY='linux'
 EDITOR='vim'
 # Always remember that if you ever have a problem with an alias, you can send a
