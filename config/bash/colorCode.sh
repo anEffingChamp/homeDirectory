@@ -2,7 +2,7 @@
 # servers then you can never have enough cues to visually distinguish them.
 # Color that prompt, baby. The first letter determines the color to give another
 # indication.
-function contactColor {
+function colorCode {
 	string=$1
     # Cut to the last directory if this is the working directory.
 	string=${string##*/}
@@ -21,7 +21,7 @@ function contactColor {
 		#[ef3EF]) color='0;34';;
 		[ef3EF]) color="$BLUE";;
 		#[gh4GH]) color='0;35';;
-		[gh4GH]) color="$PINK";;
+		[gh4GH]) color="$PURPLE";;
 		#[ij5IJ]) color='0;36';;
 		[ij5IJ]) color="$CYAN";;
 		#[kl6KL]) color='0;37';;
@@ -37,7 +37,7 @@ function contactColor {
 		#[uv~EV]) color='1;34';;
 		[uv~EV]) color="$BOLD_BLUE";;
 		#[wxWX]) color='1;35';;
-        [wxWX]) color="$WARN_RED";;
+        [wxWX]) color="$PINK";;
 		#[yzYZ]) color='1;36';;
 		[yzYZ]) color="$BOLD_CYAN";;
 	esac
