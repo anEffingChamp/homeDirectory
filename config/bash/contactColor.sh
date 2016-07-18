@@ -3,30 +3,43 @@
 # Color that prompt, baby. The first letter determines the color to give another
 # indication.
 function contactColor {
-	szString=$1
-# Cut to the last directory if this is the working directory.
-	szString=${szString##*/}
-# Cut out parentheses if this is a git branch.
-	szString=${szString##*(}
+	string=$1
+    # Cut to the last directory if this is the working directory.
+	string=${string##*/}
+    # Cut out parentheses if this is a git branch.
+	string=${string##*(}
 	if [ "$1" == "$( date +%k )" ]; then
-		nLength=$(( ${#szString} - 1 ))
-		szString=${szString:$nLength:1}
+		stringLength=$(( ${#string} - 1 ))
+		string=${string:$stringLength:1}
 	fi
-	szString=${szString:0:1}
-	case $szString in
-		[ab1AB]) colName='0;31';;
-		[cd2CD]) colName='0;33';;
-		[ef3EF]) colName='0;34';;
-		[gh4GH]) colName='0;35';;
-		[ij5IJ]) colName='0;36';;
-		[kl6KL]) colName='0;37';;
-		[mn7MN]) colName='1;30';;
-		[op8OP]) colName='1;31';;
-		[qr9QR]) colName='1;32';;
-		[st0ST]) colName='1;33';;
-		[uv~EV]) colName='1;34';;
-		[wxWX]) colName='1;35';;
-		[yzYZ]) colName='1;36';;
+	string=${string:0:1}
+	case $string in
+		#[ab1AB]) color='0;31';;
+		[ab1AB]) color="$RED";;
+		#[cd2CD]) color='0;33';;
+		[cd2CD]) color="$GREEN";;
+		#[ef3EF]) color='0;34';;
+		[ef3EF]) color="$BLUE";;
+		#[gh4GH]) color='0;35';;
+		[gh4GH]) color="$PINK";;
+		#[ij5IJ]) color='0;36';;
+		[ij5IJ]) color="$CYAN";;
+		#[kl6KL]) color='0;37';;
+		[kl6KL]) color="$BOLD";;
+		#[mn7MN]) color='1;30';;
+		[mn7MN]) color="$BOLD_GRAY";;
+		#[op8OP]) color='1;31';;
+		[op8OP]) color="$BOLD_RED";;
+		#[qr9QR]) color='1;32';;
+		[qr9QR]) color="$BOLD_GREEN";;
+		#[st0ST]) color='1;33';;
+		[st0ST]) color="$YELLOW";;
+		#[uv~EV]) color='1;34';;
+		[uv~EV]) color="$BOLD_BLUE";;
+		#[wxWX]) color='1;35';;
+        [wxWX]) color="$WARN_RED";;
+		#[yzYZ]) color='1;36';;
+		[yzYZ]) color="$BOLD_CYAN";;
 	esac
-	echo $colName
+	echo $color
 }

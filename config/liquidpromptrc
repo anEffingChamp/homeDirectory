@@ -1,3 +1,10 @@
 LP_ENABLE_SSH_COLORS=1
 LP_ENABLE_TIME=1
 LP_MARK_GIT=''
+LP_COLOR_USER_LOGGED="$(contactColor $(whoami))"
+LP_COLOR_HOST="$(contactColor $(hostname))"
+LP_COLOR_PATH="$(contactColor $PWD)"
+
+colorDate="$(contactColor $(date +%k))"
+LP_PS1_PREFIX="\[\e[$colorDate\]$(date +%a)"
+LP_COLOR_TIME="$colorDate"
