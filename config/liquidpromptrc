@@ -6,5 +6,5 @@ LP_COLOR_HOST="$(colorCode $(hostname))"
 LP_COLOR_PATH="$(colorCode $PWD)"
 
 colorDate="$(colorCode $(date +%k))"
-LP_PS1_PREFIX="\[\e[$colorDate\]$(date +%a)"
+LP_PS1_PREFIX="$colorDate$(date +%a)\[\e[m\]"
 LP_COLOR_TIME="$colorDate"
