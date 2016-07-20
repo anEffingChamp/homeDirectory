@@ -8,7 +8,7 @@ function colorCode {
 	string=${string##*/}
     # Cut out parentheses if this is a git branch.
 	string=${string##*(}
-	if [ "$1" == "$( date +%k )" ]; then
+	if [ "$1" == "$(date +%k)" ]; then
 		stringLength=$(( ${#string} - 1 ))
 		string=${string:$stringLength:1}
 	fi

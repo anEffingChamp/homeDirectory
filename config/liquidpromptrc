@@ -3,8 +3,9 @@ LP_ENABLE_TIME=1
 LP_MARK_GIT=''
 LP_COLOR_USER_LOGGED="$(colorCode $(whoami))"
 LP_COLOR_HOST="$(colorCode $(hostname))"
-LP_COLOR_PATH="$(colorCode $PWD)"
+#LP_COLOR_PATH="$(colorCode $PWD)"
+LP_COLOR_NOWRITE=$BOLD_RED
 
 colorDate="$(colorCode $(date +%k))"
-LP_PS1_PREFIX="$colorDate$(date +%a)\[\e[m\]"
+LP_PS1_PREFIX="$colorDate$(date +%a)"
 LP_COLOR_TIME="$colorDate"
