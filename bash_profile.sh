@@ -29,7 +29,7 @@ function genpass(){
         | xclip -selection clipboard;
 }
 alias supergenpass='genpass'
-alias grep='zfgrep --line-number --ignore-case --color=always --recursive -S --exclude-dir=.git'
+alias grep='grep --line-number --ignore-case --color=always --recursive --exclude-dir=.git'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -Ah --color=always'
