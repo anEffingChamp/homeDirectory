@@ -53,14 +53,15 @@ alias systemhalt='sudo shutdown -h now'
 alias systemrestart='sudo shutdown -r now'
 # git
 alias gitamend='git commit --verbose -a --amend'
-alias gitbranch='git show-branch -a --date-order | less'
+alias gitbranch='git branch --track'
 alias gitcommit='git add . && git commit --verbose'
 alias gitdiff='git diff --ignore-all-space --color=always | less'
 alias gitmerge='git merge --strategy-option=ours --verbose --stat --log'
 alias gitpull='git pull --stat --all'
 alias gitpush='gitpull && git push --force-with-lease --set-upstream'
+alias gitshow='git show-branch -a --date-order | less'
 alias gitstatus='git status | less'
-alias gitlog='gitstatus && gitdiff && gitbranch && git log --stat -p --graph'
+alias gitlog='gitstatus && gitdiff && gitshow && git log --stat -p --graph'
 alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.config/bash/webDevelopment.sh ]; then
@@ -77,3 +78,8 @@ fi
 ls
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
