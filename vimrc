@@ -19,6 +19,8 @@ set smartindent
 set number
 set autowriteall
 
+autocmd BufWritePre,BufRead *.php :%s/\s\+$//e | retab
+
 syntax on
 filetype on
 let php_html_in_strings=1
