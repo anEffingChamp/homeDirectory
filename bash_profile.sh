@@ -13,11 +13,6 @@ EDITOR='vim'
 alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
-function cdls(){
-	cd "$@"
-	ls -Ah --color=always
-}
-#alias cd='cdls'
 alias chmod='chmod --changes'
 alias cp='rsync'
 alias dd="dd bs=1024k"
