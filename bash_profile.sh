@@ -25,6 +25,12 @@ function genpass(){
 }
 alias supergenpass='genpass'
 alias grep='grep --line-number --ignore-case --color=always --recursive --exclude-dir=.git'
+# This function takes one argument to compile, and execute a Java program.
+function javaRun() {
+    fileName="${1%.*}"
+    javac ${fileName}.java && java $fileName
+}
+alias java='javaRun'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -Ah --color=always'
