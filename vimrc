@@ -31,6 +31,10 @@ set <End>=[31~
 set foldmethod=indent
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 highlight extraWhiteSpace ctermbg=darkgreen guibg=darkgreen
+if $diff
+    colorscheme default
+    highlight! link DiffText Todo
+endif
 match OverLength /\%81v.\+/
 match extraWhiteSpace /\s\+$/
 " https://github.com/scrooloose/syntastic

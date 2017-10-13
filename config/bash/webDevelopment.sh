@@ -13,12 +13,11 @@ alias phpcs='phpcs --standard=Zend'
 alias piwik='php ~/webRoot/piwik/console'
 alias sass-update='sass --update --style compact .'
 alias tidy='tidy5 --errors --gnu-emacs yes'
-# serverDiff() takes a file path to an argument. It assumes that the file is
+# Vimdiff() takes a file path to an argument. It assumes that the file is
 # also available at a corresponding path on the beta, and live servers.
 # Currently it points to NOAA servers, although this is easy enough to change.
-function serverDiff()
+function Vimdiff()
 {
     filePath='~/webRoot/'
     vimdiff $filePath/$1 scp://beta/$filePath/$1 scp://production/$filePath/$1
 }
-alias vimdiff='serverDiff'
