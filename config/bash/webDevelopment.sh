@@ -19,5 +19,5 @@ alias tidy='tidy5 --errors --gnu-emacs yes'
 function Vimdiff()
 {
     filePath='~/webRoot/'
-    vimdiff $filePath/$1 scp://beta/$filePath/$1 scp://production/$filePath/$1
+    vimdiff $1 scp://beta/$filePath/$1 scp://production/$filePath/$1
 }
