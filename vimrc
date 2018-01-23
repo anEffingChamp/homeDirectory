@@ -9,6 +9,7 @@ call plug#begin( '~/.vim/plugged' )
     "Plug 'https://github.com/tpope/vim-haml.git'
 	"Plug 'https://github.com/genoma/vim-less.git'
 	Plug 'https://github.com/scrooloose/syntastic.git'
+    Plug 'https://github.com/StanAngeloff/php.vim.git'
 call plug#end()
 
 set shiftwidth=4

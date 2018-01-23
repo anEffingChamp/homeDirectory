@@ -20,8 +20,7 @@
         "fortune":      "git@github.com:bmc/fortunes.git",
         "howTo":        "https://github.com/sparkbox/how_to.git",
         "liquidprompt": "https://github.com/nojhan/liquidprompt.git",
-        "vimPHP":       "https://github.com/StanAngeloff/php.vim.git",
         "vimPlug":      "https://github.com/junegunn/vim-plug.git",
         "vimrc":        "https://github.com/amix/vimrc.git"
-  }
+    }
 }
