@@ -19,7 +19,7 @@ alias dd="dd bs=1024k"
 alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 function genpass(){
 	echo -n "Enter password. "
-	stty -echo; read szPass; stty echo; echo 
+	stty -echo; read szPass; stty echo; echo
 	supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }

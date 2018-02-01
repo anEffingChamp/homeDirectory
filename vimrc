@@ -3,6 +3,11 @@ source ~/.libraries/vimrc/vimrcs/filetypes.vim
 source ~/.libraries/vimrc/vimrcs/extended.vim
 
 " https://github.com/junegunn/vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin( '~/.vim/plugged' )
 	Plug 'https://github.com/junegunn/vim-easy-align.git'
 	Plug 'https://github.com/ervandew/supertab.git'

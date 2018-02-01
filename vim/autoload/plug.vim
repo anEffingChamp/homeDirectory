@@ -1,1 +1,1 @@
-/Users/ramongomez/.libraries/vimPlug/plug.vim
+../../.libraries/vimPlug/plug.vim
