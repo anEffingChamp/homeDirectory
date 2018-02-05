@@ -16,7 +16,8 @@ alias bc="bc -l"
 alias chmod='chmod --changes'
 alias cp='rsync'
 alias dd="dd bs=1024k"
-alias emerge=' emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+alias find='find -L -ls . -name'
 function genpass(){
 	echo -n "Enter password. "
 	stty -echo; read szPass; stty echo; echo
