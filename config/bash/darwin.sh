@@ -1,18 +1,18 @@
 if [ $(uname) == 'Darwin' ]; then
-	function cdls(){
-		cd "$@"
+	function functionCD(){
+		\cd "$@"
 		\ls -GA
 	}
-	alias cd='cdls'
-    alias chmod='chmod -vv'
-    function findFunction(){
-        find -L . -name *$@*
+    function functionFind(){
+        \find -L . -name *$@*
     }
-	function genpass(){
+	function functionSupergenpass(){
 		echo -n "Enter password. ";
 		stty -echo; read szPass; stty echo; echo
         pbcopy <<< $(\supergenpass -p $szPass "$@")
 	}
+	alias cd='functionCD'
+    alias chmod='chmod -vv'
 	alias ls='ls -GA'
     alias open='\open'
 	alias ps='ps axjSm'
