@@ -17,15 +17,22 @@ alias chmod='chmod --changes'
 alias cp='rsync'
 alias dd="dd bs=1024k"
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
-alias find='find -L -ls . -name'
-function genpass(){
+function findFunction(){
+    find -L -ls . -name *$@*
+}
+alias find='findFunction'
+function grepFunction(){
+    grep --line-number --ignore-case --color=always --recursive \
+        --exclude-dir=.git $@ .
+}
+alias grep='grepFunction'
+function supergenpassFunction(){
 	echo -n "Enter password. "
 	stty -echo; read szPass; stty echo; echo
 	supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
-alias supergenpass='genpass'
-alias grep='grep --line-number --ignore-case --color=always --recursive --exclude-dir=.git'
+alias supergenpass='supergenpassFunction'
 # This function takes one argument to compile, and execute a Java program.
 function javaRun() {
     fileName="${1%.*}"

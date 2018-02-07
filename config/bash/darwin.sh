@@ -5,7 +5,9 @@ if [ $(uname) == 'Darwin' ]; then
 	}
 	alias cd='cdls'
     alias chmod='chmod -vv'
-    alias find='find -L . -name'
+    function findFunction(){
+        find -L . -name *$@*
+    }
 	function genpass(){
 		echo -n "Enter password. ";
 		stty -echo; read szPass; stty echo; echo
