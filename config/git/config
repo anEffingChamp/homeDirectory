@@ -1,34 +1,40 @@
 [user]
 	email = jon@smalls.rocks
 	name  = Jonathan Smalls
-[core]
-	editor           = vim
-	autocrlf         = input
-	symlinks         = true
-	compression      = -1
-	loosecompression = -1
-	quotepath        = false
-[commit]
-    template = ~/.config/git/gitmessage
-[push]
-	default = current
-[rebase]
-	stat = true
+[branch]
+    autoSetupMerge = always
+    mergeOptions   = --strategy-option=ours --verbose --stat --log
 [color]
-	ui          = always
 	branch      = always
-	diff        = auto
-	grep        = auto
-	interactive = auto
 	showbranch  = always
 	status      = always
+	ui          = always
+[column]
+    ui = auto
+[commit]
+    template = ~/.config/git/gitmessage
+    verbose  = true
+[core]
+	compression = -1
+	editor      = vim
+    eol         = lf
+    fsmonitor   = true
+    pager       = less --quit-if-one-screen --ignore-case --status-column --long-prompt --squeeze-blank-lines
+	symlinks    = true
+	quotepath   = false
+[diff]
+    colorMoved = dimmed_zebra
+	dirstat    = lines
+	renames    = copy
+[init]
+	templatedir = ~/.config/git/initTemplate
 [merge]
 	tool      = vimdiff
 	verbosity = 1
-[diff]
-	dirstat = lines
-	renames = copy
-[init]
-	templatedir = ~/.config/git/initTemplate
+[push]
+	default    = current
+    followTags = true
+[rebase]
+	stat = true
 [credential]
 	helper = cache
