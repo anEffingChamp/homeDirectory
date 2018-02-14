@@ -11,7 +11,7 @@ EDITOR='vim'
 #		/bin/ls --help
 #		\ls --help
 function functionFind(){
-    \find -L -ls . -name *$@*
+    \find -L -ls . -iname *$@*
 }
 function functionGrep(){
     \grep --line-number --ignore-case --color=always --recursive \

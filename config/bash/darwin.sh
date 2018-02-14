@@ -4,7 +4,7 @@ if [ $(uname) == 'Darwin' ]; then
 		\ls -GA
 	}
     function functionFind(){
-        \find -L . -name *$@*
+        \find -L . -iname *$@*
     }
 	function functionSupergenpass(){
 		echo -n "Enter password. ";
