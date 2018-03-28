@@ -46,7 +46,6 @@ if $diff
     highlight! link DiffText Todo
 endif
 match OverLength /\%81v.\+/
-match extraWhiteSpace /\s\+$/
 " https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
