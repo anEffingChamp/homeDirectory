@@ -28,7 +28,7 @@ set smartindent
 set number
 set autowriteall
 
-autocmd BufWritePre,BufRead *.php :%s/\s\+$//e | retab
+autocmd BufWritePre,BufRead * :%s/\s\+$//e | retab
 
 syntax on
 filetype on
