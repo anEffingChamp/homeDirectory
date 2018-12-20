@@ -8,8 +8,8 @@ PS_PERSONALITY='linux'
 EDITOR='vim'
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
-#		/bin/ls --help
-#		\ls --help
+#       /bin/ls --help
+#       \ls --help
 function functionFind(){
     \find -L -ls . -iname *$@*
 }
@@ -18,9 +18,9 @@ function functionGrep(){
         --exclude-dir=.git $@ .
 }
 function functionSupergenpass(){
-	echo -n "Enter password. "
-	stty -echo; read szPass; stty echo; echo
-	supergenpass -p $szPass "$@" \
+    echo -n "Enter password. "
+    stty -echo; read szPass; stty echo; echo
+    supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
 function functionJava() {
@@ -70,12 +70,13 @@ alias gitpull='git pull --stat --all'
 alias gitpush='gitpull && echo && git push --force-with-lease --set-upstream --tags && echo && git remote show origin'
 alias gitshow='git show-branch -a --date-order | less'
 alias gitstatus='git status | less'
+alias gitstash='git stash show --stat -p'
 alias gitlog='gitstatus && gitdiff && gitshow && git log --stat -p --graph'
 alias gitrebase='git rebase -i'
 # external configuration
 if [ -f ~/.config/bash/webDevelopment.sh ]; then
-	source ~/.config/bash/webDevelopment.sh
-	source ~/.config/bash/darwin.sh
+    source ~/.config/bash/webDevelopment.sh
+    source ~/.config/bash/darwin.sh
 fi
 
 # startup routine
