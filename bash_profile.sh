@@ -63,7 +63,7 @@ alias systemrestart='sudo shutdown -r now'
 # git
 alias gitamend='git commit --verbose -a --amend'
 alias gitbranch='git branch -a --track'
-alias gitcommit='git add . && git commit'
+alias gitcommit='git add . && git commit -a'
 alias gitdiff='git diff --ignore-all-space --color=always | less'
 alias gitgrep='git rev-list --all | xargs git grep --break'
 alias gitpull='git pull --stat --all'
