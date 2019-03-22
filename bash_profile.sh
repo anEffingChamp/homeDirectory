@@ -23,10 +23,6 @@ function functionSupergenpass(){
     supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
-function functionJava() {
-    fileName="${1%.*}"
-    javac ${fileName}.java && java $fileName
-}
 alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
@@ -37,8 +33,6 @@ alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep -
 alias find='functionFind'
 alias grep='functionGrep'
 alias supergenpass='functionSupergenpass'
-# This function takes one argument to compile, and execute a Java program.
-alias java='functionJava'
 alias less='less -msr'
 alias ln='ln -sv'
 alias ls='ls -Ah --color=always'
@@ -53,6 +47,7 @@ alias ping='ping -c 10 -i 0.2'
 alias ps='ps -ax'
 alias traceroute='traceroute -nw 1'
 alias type='type -a'
+alias vimBasic='vim -Nu NONE'
 alias zypper='sudo zypper'
 # shutdown
 alias systemupgrade='sudo nice -n 18 npm upgrade -g \
