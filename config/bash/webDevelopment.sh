@@ -1,6 +1,5 @@
 alias csslint='csslint --ignore=box-model'
 alias ifconfig='curl ifconfig.me'
-alias haml='haml.ruby2.2 -rhaml/filters/php'
 # http://www.hpl.hp.com/research/linux/httperf/httperf-man-0.9.txt
 alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
 alias mosh='mosh --predict=always'

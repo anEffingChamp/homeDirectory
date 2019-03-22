@@ -7,5 +7,6 @@ LP_COLOR_HOST="$(colorCode $(hostname))"
 LP_COLOR_NOWRITE=$BOLD_RED
 
 colorDate="$(colorCode $(date +%k))"
-LP_PS1_PREFIX="$colorDate$(date +%a)"
+LP_PS1_PREFIX="\n$colorDate$(date +%a)"
+LP_PS1_POSTFIX="\n    "
 LP_COLOR_TIME="$colorDate"
