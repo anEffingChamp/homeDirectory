@@ -1,9 +1,17 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:~/bin:$PATH"
+
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 source ~/.config/bash/colorCode.sh
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
+userColor="$(colorCode $(whoami))"
+hostColor="$(colorCode $(hostname))"
+pathColor="$(colorCode $(basename $PWD))"
+dateColor="$(colorCode $(date +%M))"
+PS1="${PS1//"{dateColor}"/${dateColor}$(date +%a)}"
+PS1="${PS1//"{pathColor}"/${pathColor}}"
+
 PS_PERSONALITY='linux'
 EDITOR='vim'
 # Always remember that if you ever have a problem with an alias, you can send a
@@ -23,6 +31,7 @@ function functionSupergenpass(){
     supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
+
 alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
