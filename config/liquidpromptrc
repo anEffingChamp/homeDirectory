@@ -1,16 +1,28 @@
+pathColor="$(colorCode $(basename $PWD))"
+dateColor="$(colorCode $(date +%M))"
 userColor="$(colorCode $(whoami))"
 hostColor="$(colorCode $(hostname))"
 
-LP_ENABLE_SSH_COLORS=1
-LP_ENABLE_TIME=1
+LP_ENABLE_PROXY=0
+LP_ENABLE_BATT=0
+LP_ENABLE_SVN=0
+LP_ENABLE_HG=0
+LP_ENABLE_BZR=0
+LP_ENABLE_FOSSIL=0
+LP_ENABLE_SCREEN_TITLE=0
+LP_ENABLE_SUDO=1
+LP_ENABLE_FQDN=0
+LP_TIME_ANALOG=0
+LP_ENABLE_SSH_COLORS=0
+LP_ENABLE_TIME=0
+
 LP_MARK_GIT=''
 LP_COLOR_USER_LOGGED=$userColor
 LP_COLOR_HOST=$hostColor
+LP_COLOR_TIME=''
+LP_COLOR_PATH=''
 LP_COLOR_NOWRITE=$BOLD_RED
 
-# We create some placeholder text for later string substitution in real time.
-#LP_COLOR_PATH="{pathColor}"
-#LP_PS1_PREFIX="\n{dateColor}\D{%a}"
-LP_PS1_PREFIX="\n\D{%a}"
-LP_PS1_POSTFIX="\n ${GREEN}>>${NO_COL} "
-LP_COLOR_TIME="$colorDate"
+LP_PS1_PREFIX="\n"
+LP_PS1_POSTFIX="\n ${BOLD_GREEN}>> ${NO_COL}"
+LP_PS1_FILE='/Users/jsmalls/.config/liquid.ps1'
