@@ -25,4 +25,4 @@ LP_COLOR_NOWRITE=$BOLD_RED
 
 LP_PS1_PREFIX="\n"
 LP_PS1_POSTFIX="\n ${BOLD_GREEN}>> ${NO_COL}"
-LP_PS1_FILE='/Users/jsmalls/.config/liquid.ps1'
+LP_PS1_FILE="${HOME}/.config/liquid.ps1"
