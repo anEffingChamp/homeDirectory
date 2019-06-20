@@ -14,10 +14,12 @@ function colorCode {
         string=${string:0:1}
     fi
     string=${string:0:1}
-    color=$((`printf '%d' "'${string}"` - 28))
+    color=$((`printf '%d' "'${string}"` - 33))
     # At this point $color is actually a number, so lets give it some range in
     # the available 256 palette. The meaningful ASCII characters are in
-    # [48,127], so lets increment in a meaningful way.
-    color=$(($color * 255 / (127 - 48)))
+    # [33,126], so lets increment in a meaningful way. We already subtracted 33
+    # to align with the bottom of our range, so now we can multiply such that
+    # our highest value aligns with the top of the range.
+    color=$(($color * 255 / 126))
     echo "\\033[38;5;${color}m"
 }
