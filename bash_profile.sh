@@ -79,7 +79,7 @@ fi
 
 # startup routine
 if [ '' != $(which fortune) ]; then
-    echo -e "\x1B[0;32m$(fortune)\033[m"
+    echo -e "$(colorCode $(hostname))$(fortune)\033[m\n"
 fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
