@@ -11,7 +11,7 @@ alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
 alias phpcs='phpcs --standard=Zend'
 alias piwik='php ~/webRoot/piwik/console'
 alias sass-update='sass assets/index.scss assets/index.css'
-alias tidy='tidy5 --errors --gnu-emacs yes'
+alias tidy='tidy --errors --gnu-emacs yes'
 # Vimdiff() takes a file path to an argument. It assumes that the file is
 # also available at a corresponding path on the beta, and live servers.
 # Currently it points to NOAA servers, although this is easy enough to change.
