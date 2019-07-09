@@ -6,12 +6,15 @@ function colorCode {
     string=$1
     # Cut out parentheses if this is a git branch.
     string=${string##*(}
-    # TODO What am I doing here for time stamps? Just the time stamp should be
-    # enough.
     if [ "$1" == "$(date +%M)" ]; then
         # I just want to change the color every ten minutes rather than every
         # minute.
         string=${string:0:1}
+    fi
+    if [ "$1" == "$(hostname)" ]; then
+        # Internal IP addresses will look very similar except for the last
+        # octet, so that is what we need to parse.
+        string=${string##*.}
     fi
     string=${string:0:1}
     color=$((`printf '%d' "'${string}"` - 33))
