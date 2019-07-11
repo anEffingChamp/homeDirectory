@@ -1,7 +1,7 @@
 pathColor="$(colorCode $(basename $PWD))"
 dateColor="$(colorCode $(date +%M))"
 userColor="$(colorCode $(whoami))"
-hostColor="$(colorCode $(hostname))"
+hostColor="$(colorCode $(\ifconfig -a))"
 
 LP_ENABLE_PROXY=0
 LP_ENABLE_BATT=0
@@ -18,7 +18,7 @@ LP_ENABLE_TIME=0
 
 LP_MARK_GIT=''
 LP_COLOR_USER_LOGGED=$userColor
-LP_COLOR_HOST=$hostColor
+LP_COLOR_SSH=$hostColor
 LP_COLOR_TIME=''
 LP_COLOR_PATH=''
 LP_COLOR_NOWRITE=$BOLD_RED

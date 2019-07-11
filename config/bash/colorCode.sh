@@ -11,10 +11,10 @@ function colorCode {
         # minute.
         string=${string:0:1}
     fi
-    if [ "$1" == "$(hostname)" ]; then
+    if [ "$1" == "$(\ifconfig -a)" ]; then
         # Internal IP addresses will look very similar except for the last
         # octet, so that is what we need to parse.
-        string=${string##*.}
+        string=${string: -1}
     fi
     string=${string:0:1}
     color=$((`printf '%d' "'${string}"` - 33))

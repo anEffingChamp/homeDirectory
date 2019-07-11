@@ -31,7 +31,7 @@
 pathColor="$(colorCode $(basename $PWD))"
 dateColor="$(colorCode $(date +%M))"
 userColor="$(colorCode $(whoami))"
-hostColor="$(colorCode $(hostname))"
+hostColor="$(colorCode $(\ifconfig -a))"
 # add time, jobs, load and battery
 LP_PS1="${LP_PS1_PREFIX}${dateColor}$(date +"%b%d %H%M.%S") ${NO_COL}"
 LP_PS1="${LP_PS1}${LP_BATT}${LP_JOBS}"
