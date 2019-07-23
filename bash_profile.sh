@@ -30,6 +30,7 @@ alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
 alias chmod='chmod --changes'
+alias cd='functionCD'
 alias cp='rsync'
 alias dd="dd bs=1024k"
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
@@ -38,7 +39,11 @@ alias grep='functionGrep'
 alias supergenpass='functionSupergenpass'
 alias less='less -msr'
 alias ln='ln -sv'
-alias ls='ls -Ah --color=always'
+alias ls='ls -Ah --color --group-directories-first'
+function functionCD(){
+    \cd "$@"
+    ls
+}
 alias open="xdg-open"
 alias ssh='ssh -aYC'
 alias rm='rm -v'
