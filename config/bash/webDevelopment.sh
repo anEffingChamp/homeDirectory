@@ -9,7 +9,7 @@ alias npm-install='sudo npm upgrade -g'
 # http://nmap.org/book/man-port-scanning-techniques.html
 alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
 alias phpcs='phpcs --standard=Zend'
-alias phpunit='phpunit --colors=always'
+alias phpunit='phpunit --colors=always -v'
 alias piwik='php ~/webRoot/piwik/console'
 alias sass-update='sass assets/index.scss assets/index.css'
 alias tidy='tidy -errors -modify -indent 4 -wrap 80'
