@@ -37,7 +37,7 @@ alias find='functionFind'
 alias grep='functionGrep'
 alias supergenpass='functionSupergenpass'
 alias less='less -msr'
-alias ln='ln -sv'
+alias ln='ln -svhf'
 alias ls='ls -Ah --color=always'
 alias open="xdg-open"
 alias ssh='ssh -aYC'
