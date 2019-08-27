@@ -27,6 +27,9 @@ set expandtab
 set smartindent
 set number
 set autowriteall
+set diffopt+=iwhite
+set diffopt+=icase
+set diffopt+=filler
 
 autocmd BufWritePre,BufRead * :%s/\s\+$//e | retab
 
