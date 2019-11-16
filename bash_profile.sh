@@ -26,8 +26,8 @@ function functionSupergenpass(){
         | xclip -selection clipboard;
 }
 function functionJava() {
-	fileName="${1%.*}"
-	javac ${fileName}.java && java $fileName
+    fileName="${1%.*}"
+    javac ${fileName}.java && java $fileName && rm *.class
 }
 alias ":e"='vim'
 alias ":x"='exit'
