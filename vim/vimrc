@@ -12,12 +12,12 @@ call plug#begin( '~/.vim/plugged' )
     Plug 'https://github.com/junegunn/vim-easy-align.git'
     Plug 'https://github.com/ervandew/supertab.git'
     Plug 'https://github.com/mhinz/vim-startify'
-    Plug 'https://github.com/itchyny/lightline.vim'
     Plug 'https://github.com/wellle/targets.vim'
     Plug 'https://github.com/scrooloose/nerdcommenter'
     Plug 'https://github.com/vim-airline/vim-airline'
     Plug 'https://github.com/scrooloose/syntastic.git'
     Plug 'https://github.com/StanAngeloff/php.vim.git'
+    Plug 'https://github.com/vim-vdebug/vdebug'
 call plug#end()
 
 set shiftwidth=4
@@ -61,3 +61,5 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_checkers = ['php', 'phpcbf', 'phpcs']
 let g:syntastic_sql_checkers = ['sqlint']
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
