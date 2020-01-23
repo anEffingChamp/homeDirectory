@@ -17,7 +17,7 @@ call plug#begin( '~/.vim/plugged' )
     Plug 'https://github.com/vim-airline/vim-airline'
     Plug 'https://github.com/scrooloose/syntastic.git'
     Plug 'https://github.com/StanAngeloff/php.vim.git'
-    Plug 'https://github.com/vim-vdebug/vdebug'
+    "Plug 'https://github.com/vim-vdebug/vdebug'
 call plug#end()
 
 set shiftwidth=4
@@ -44,9 +44,10 @@ set foldmethod=indent
 set textwidth=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 highlight extraWhiteSpace ctermbg=darkgreen guibg=darkgreen
-if $diff
-    colorscheme darkblue
+if &diff
+    colorscheme industry
     highlight! link DiffText Todo
+    syntax off
 endif
 match OverLength /\%81v.\+/
 " https://github.com/scrooloose/syntastic
