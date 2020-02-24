@@ -102,3 +102,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+alias laptop='bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)'
+
+export PATH="$HOME/.bin:$PATH"
