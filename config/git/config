@@ -4,9 +4,10 @@
     autoSetupMerge = always
     mergeOptions   = --strategy-option=ours --verbose --stat --log
 [color]
-    ui = true
+    # I have always output, because I frequently pipe output to less.
+    ui = always
 [column]
-    ui = auto
+    ui = always
 [commit]
     template = ~/.config/git/gitmessage
     verbose  = true
@@ -19,8 +20,6 @@
     sharedRepository = group
     symlinks         = true
     quotepath        = false
-[credential]
-    helper = cache
 [diff]
     colorMoved = dimmed_zebra
     dirstat    = lines
