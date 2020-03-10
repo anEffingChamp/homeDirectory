@@ -89,7 +89,7 @@ if [ -f ~/.config/bash/webDevelopment.sh ]; then
 fi
 
 # startup routine
-if [ "no fortune in" != "*$(which fortune)*" ]; then
+if [ "" != "$(command -v fortune)" ]; then
     echo -e "$(colorCode $(hostname))$(fortune)\033[m\n"
 fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
