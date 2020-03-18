@@ -92,6 +92,13 @@ fi
 if [ "" != "$(command -v fortune)" ]; then
     echo -e "$(colorCode $(hostname))$(fortune)\033[m\n"
 fi
+gitFile="~/.config/git/completion.sh"
+# TODO Debug why we can not find and run this file. Lets get git completion.
+# https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
+if [ test -f "$gitFile" ]; then
+    echo 'stuf'
+    ". $gitFile"
+fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
 ls
@@ -106,3 +113,4 @@ export PATH
 alias laptop='bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)'
 
 export PATH="$HOME/.bin:$PATH"
+more
