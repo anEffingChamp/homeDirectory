@@ -95,7 +95,7 @@ fi
 gitFile="~/.config/git/completion.sh"
 # TODO Debug why we can not find and run this file. Lets get git completion.
 # https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
-if [ test -f "$gitFile" ]; then
+if [[ -f "$gitFile" ]]; then
     echo 'stuf'
     ". $gitFile"
 fi
