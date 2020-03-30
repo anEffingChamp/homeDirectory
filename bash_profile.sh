@@ -1,12 +1,13 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:~/bin:$PATH"
 
-configDirectory='.config'
-if [[ -d $configDirectory ]]; then
+# external configuration
+if [[ -d .config ]]; then
     # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
-    source ~/.config/bash/colorCode.sh
+    source .config/bash/colorCode.sh
+    source .config/bash/webDevelopment.sh
     # https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
-    source ~/.config/git/bash_completion.sh
+    source .config/git/bash_completion.sh
 fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
@@ -87,10 +88,8 @@ alias gitstatus='git status | less'
 alias gitstash='git stash show --stat -p'
 alias gitlog='gitstatus && gitdiff && gitshow && git log --stat -p --graph'
 alias gitrebase='git rebase -i'
-# external configuration
-if [ -f ~/.config/bash/webDevelopment.sh ]; then
-    source ~/.config/bash/webDevelopment.sh
-    source ~/.config/bash/darwin.sh
+if [ -f .config/bash/darwin.sh ]; then
+    source .config/bash/darwin.sh
 fi
 
 # startup routine
