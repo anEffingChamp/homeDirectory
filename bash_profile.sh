@@ -1,8 +1,13 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:~/bin:$PATH"
 
-# https://wiki.archlinux.org/index.php/Color_Bash_Prompt
-source ~/.config/bash/colorCode.sh
+configDirectory='.config'
+if [[ -d $configDirectory ]]; then
+    # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+    source ~/.config/bash/colorCode.sh
+    # https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
+    source ~/.config/git/bash_completion.sh
+fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
 
@@ -91,13 +96,6 @@ fi
 # startup routine
 if [ "" != "$(command -v fortune)" ]; then
     echo -e "$(colorCode $(hostname))$(fortune)\033[m\n"
-fi
-gitFile="~/.config/git/completion.sh"
-# TODO Debug why we can not find and run this file. Lets get git completion.
-# https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
-if [[ -f "$gitFile" ]]; then
-    echo 'stuf'
-    ". $gitFile"
 fi
 # Run upgrades on Thursdays, because no one wants to deal with broken systems on
 # Friday.
