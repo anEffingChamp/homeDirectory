@@ -18,44 +18,44 @@ EDITOR='vim'
 # command unaltered directly to the binary, eg
 #       /bin/ls --help
 #       \ls --help
+alias ":e"='vim'
+alias ":x"='exit'
+alias bc="bc -l"
+alias chmod='chmod --changes'
+alias cd='functionCD'
+function functionCD(){
+    \cd "$@"
+    ls
+}
+alias cp='rsync'
+alias dd="dd bs=1024k"
+alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
+alias find='functionFind'
 function functionFind(){
     \find -L -ls . -iname *$@*
 }
+alias grep='functionGrep'
 function functionGrep(){
     \grep --line-number --ignore-case --color=always --recursive \
         --exclude-dir=.git $@ .
 }
+# This function takes one argument to compile, and execute a Java program.
+alias java='functionJava'
+function functionJava() {
+    fileName="${1%.*}"
+    javac ${fileName}.java && java $fileName && rm *.class
+}
+alias less='less -msr'
+alias supergenpass='functionSupergenpass'
 function functionSupergenpass(){
     echo -n "Enter password. "
     stty -echo; read szPass; stty echo; echo
     supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
-function functionJava() {
-    fileName="${1%.*}"
-    javac ${fileName}.java && java $fileName && rm *.class
-}
-alias ":e"='vim'
-alias ":x"='exit'
-alias bc="bc -l"
-alias chmod='chmod --changes'
-alias cd='functionCD'
-alias cp='rsync'
-alias dd="dd bs=1024k"
-alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
-alias find='functionFind'
-alias grep='functionGrep'
-# This function takes one argument to compile, and execute a Java program.
-alias java='functionJava'
-alias less='less -msr'
-alias supergenpass='functionSupergenpass'
 alias ln='ln -svhf'
 alias ls='ls -Ah --color=always'
 alias ls='ls -Ah --color --group-directories-first'
-function functionCD(){
-    \cd "$@"
-    ls
-}
 alias open="xdg-open"
 alias ssh='ssh -aYC'
 alias rm='rm -v'
