@@ -54,8 +54,8 @@ function functionSupergenpass(){
         | xclip -selection clipboard;
 }
 alias ln='ln -svhf'
-alias ls='ls -Ah --color=always'
 alias ls='ls -Ah --color --group-directories-first'
+alias mv='mv -iv'
 alias open="xdg-open"
 alias ssh='ssh -aYC'
 alias rm='rm -v'
