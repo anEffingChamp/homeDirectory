@@ -59,7 +59,9 @@ alias mv='mv -iv'
 alias open="xdg-open"
 alias ssh='ssh -aYC'
 alias rm='rm -v'
-alias rsync='rsync --update --compress --copy-links --verbose --progress --delay-updates'
+# Normally I prefer human legible command flags, but this would throw a 'too
+# many flags' error in that case.
+alias rsync='rsync -uLzthP6 --delay-updates'
 alias tar='tar -xzvf'
 alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
