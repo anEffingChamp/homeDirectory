@@ -1,7 +1,7 @@
 set completion-ignore-case On
-set history-size 5000
-set show-all-if-ambiguous On
 set editing-mode vi
+set history-size 5000
 set keymap vi-command
-
-bind TAB:menu-complete
+set menu-complete-display-prefix On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
