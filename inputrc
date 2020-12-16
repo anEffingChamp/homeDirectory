@@ -3,3 +3,5 @@ set history-size 5000
 set show-all-if-ambiguous On
 set editing-mode vi
 set keymap vi-command
+
+bind TAB:menu-complete

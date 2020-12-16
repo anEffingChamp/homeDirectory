@@ -50,6 +50,8 @@ alias supergenpass='functionSupergenpass'
 function functionSupergenpass(){
     echo -n "Enter password. "
     stty -echo; read szPass; stty echo; echo
+    # TODO Make 15 character passes so that programs are less likely to
+    # complain.
     supergenpass -p $szPass "$@" \
         | xclip -selection clipboard;
 }
