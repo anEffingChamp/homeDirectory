@@ -9,7 +9,10 @@ if [ $(uname) == 'Darwin' ]; then
     function functionSupergenpass(){
         echo -n "Enter password. ";
         stty -echo; read szPass; stty echo; echo
-        pbcopy <<< $(\supergenpass -p $szPass "$@")
+        # I have also started using fifteen character passes, because some
+        # domains have minimum character requirements.
+        # I manually append a special character for domains that require it.
+        pbcopy <<< "$(\supergenpass --length 19 --password $szPass "$@")!"
     }
     alias cd='functionCD'
     alias chmod='chmod -vv'

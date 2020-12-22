@@ -49,10 +49,11 @@ alias less='less -msr'
 alias supergenpass='functionSupergenpass'
 function functionSupergenpass() {
     echo -n "Enter password. "
-    stty -echo; read szPass; stty echo; echo
-    # TODO Make 15 character passes so that programs are less likely to
-    # complain.
-    supergenpass -p $szPass "$@" \
+    stty -echo; read passMaster; stty echo; echo
+    # I have also started using fifteen character passes, because some domains
+    # have minimum character requirements.
+    # I manually append a special character for domains that require it.
+    "$(supergenpass --length 19 --password $passMaster)!" \
         | xclip -selection clipboard;
 }
 alias ln='ln -svhf'
