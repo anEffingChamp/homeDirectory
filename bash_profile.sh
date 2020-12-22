@@ -23,7 +23,7 @@ alias ":x"='exit'
 alias bc="bc -l"
 alias chmod='chmod --changes'
 alias cd='functionCD'
-function functionCD(){
+function functionCD() {
     \cd "$@"
     ls
 }
@@ -31,11 +31,11 @@ alias cp='rsync'
 alias dd="dd bs=1024k"
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias find='functionFind'
-function functionFind(){
+function functionFind() {
     \find -L -ls . -iname *$@*
 }
 alias grep='functionGrep'
-function functionGrep(){
+function functionGrep() {
     \grep --line-number --ignore-case --color=always --recursive \
         --exclude-dir=.git $@ .
 }
@@ -47,7 +47,7 @@ function functionJava() {
 }
 alias less='less -msr'
 alias supergenpass='functionSupergenpass'
-function functionSupergenpass(){
+function functionSupergenpass() {
     echo -n "Enter password. "
     stty -echo; read szPass; stty echo; echo
     # TODO Make 15 character passes so that programs are less likely to
