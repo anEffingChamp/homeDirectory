@@ -61,6 +61,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_checkers = ['php', 'phpcbf', 'phpcs']
+let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_sql_checkers = ['sqlint']
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
