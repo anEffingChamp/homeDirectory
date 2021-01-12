@@ -4,7 +4,7 @@ alias ifconfig='curl ifconfig.me'
 alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
 alias mosh='mosh --predict=always'
 alias mysql='mysql --compress --reconnect --safe-updates --password'
-alias mysqldump='mysqldump --opt'
+alias mysqldump='mysqldump --opt --verbose'
 alias npm-install='sudo npm upgrade -g'
 # http://nmap.org/book/man-port-scanning-techniques.html
 alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
