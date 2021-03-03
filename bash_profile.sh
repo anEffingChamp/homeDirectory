@@ -28,6 +28,7 @@ function functionCD() {
     ls
 }
 alias cp='rsync'
+alias curl='curl --remote-name-all --compressed --remote-time --verbose'
 alias dd="dd bs=1024k"
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
 alias find='functionFind'
