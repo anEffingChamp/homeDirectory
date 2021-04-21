@@ -26,6 +26,7 @@
     renames    = copy
 [init]
     templatedir = ~/.config/git/initTemplate
+	defaultBranch = dev
 [merge]
     tool      = vimdiff
     verbosity = 1

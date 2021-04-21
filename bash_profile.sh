@@ -21,6 +21,7 @@ EDITOR='vim'
 alias ":e"='vim'
 alias ":x"='exit'
 alias bc="bc -l"
+alias cat="cat --number --squeeze-blank"
 alias chmod='chmod --changes'
 alias cd='functionCD'
 function functionCD() {
