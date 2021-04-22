@@ -28,7 +28,7 @@ function functionCD() {
     \cd "$@"
     ls
 }
-alias cp='rsync'
+alias cp="rsync"
 alias curl='curl --remote-name-all --compressed --remote-time --verbose'
 alias dd="dd bs=1024k"
 alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
@@ -66,7 +66,7 @@ alias ssh='ssh -aYC'
 alias rm='rm -v'
 # Normally I prefer human legible command flags, but this would throw a 'too
 # many flags' error in that case.
-alias rsync='rsync -uLphP6 --delay-updates'
+alias rsync="rsync -uLphP6 --delay-updates"
 alias tar='tar -xzvf'
 alias top='top -bn 1 -u $USER'
 alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
