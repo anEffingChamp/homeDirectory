@@ -12,43 +12,43 @@ fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
 
-PS_PERSONALITY='linux'
-EDITOR='vim'
+PS_PERSONALITY="linux"
+EDITOR="vim"
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
 #       /bin/ls --help
 #       \ls --help
-alias ":e"='vim'
-alias ":x"='exit'
+alias ":e"="vim"
+alias ":x"="exit"
 alias bc="bc -l"
 alias cat="cat --number --squeeze-blank"
-alias chmod='chmod --changes'
-alias cd='functionCD'
+alias chmod="chmod --changes"
+alias cd="functionCD"
 function functionCD() {
     \cd "$@"
     ls
 }
 alias cp="rsync"
-alias curl='curl --remote-name-all --compressed --remote-time --verbose'
+alias curl="curl --remote-name-all --compressed --remote-time --verbose"
 alias dd="dd bs=1024k"
-alias emerge='emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse'
-alias find='functionFind'
+alias emerge="emerge --ask --autounmask --update --alphabetical --quiet --deep --newuse"
+alias find="functionFind"
 function functionFind() {
     \find -L -ls . -iname *$@*
 }
-alias grep='functionGrep'
+alias grep="functionGrep"
 function functionGrep() {
     \grep --line-number --ignore-case --color=always --recursive \
         --exclude-dir=.git $@ .
 }
 # This function takes one argument to compile, and execute a Java program.
-alias java='functionJava'
+alias java="functionJava"
 function functionJava() {
     fileName="${1%.*}"
     javac ${fileName}.java && java $fileName && rm *.class
 }
-alias less='less -msr'
-alias supergenpass='functionSupergenpass'
+alias less="less -msr"
+alias supergenpass="functionSupergenpass"
 function functionSupergenpass() {
     echo -n "Enter password. "
     stty -echo; read passMaster; stty echo; echo
@@ -58,44 +58,44 @@ function functionSupergenpass() {
     "$(supergenpass --length 19 --password $passMaster)!" \
         | xclip -selection clipboard;
 }
-alias ln='ln -svhf'
-alias ls='ls -Ah --color --group-directories-first'
-alias mv='mv -iv'
+alias ln="ln -svhf"
+alias ls="ls -Ah --color --group-directories-first"
+alias mv="mv -iv"
 alias open="xdg-open"
-alias ssh='ssh -aYC'
-alias rm='rm -v'
+alias ssh="ssh -aYC"
+alias rm="rm -v"
 # Normally I prefer human legible command flags, but this would throw a 'too
 # many flags' error in that case.
 alias rsync="rsync -uLphP6 --delay-updates"
-alias tar='tar -xzvf'
-alias top='top -bn 1 -u $USER'
-alias wget='wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension'
-alias ping='ping -c 10 -i 0.2'
-alias ps='ps -ax'
-alias traceroute='traceroute -nw 1'
-alias type='type -a'
-alias vimBasic='vim -Nu NONE'
-alias zypper='sudo zypper'
+alias tar="tar -xzvf"
+alias top="top -bn 1 -u $USER"
+alias wget="wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension"
+alias ping="ping -c 10 -i 0.2"
+alias ps="ps -ax"
+alias traceroute="traceroute -nw 1"
+alias type="type -a"
+alias vimBasic="vim -Nu NONE"
+alias zypper="sudo zypper"
 # shutdown
-alias systemupgrade='sudo nice -n 18 npm upgrade -g \
+alias systemupgrade="sudo nice -n 18 npm upgrade -g \
     && sudo nice -n 18 zypper install-new-recommends \
-    && sudo nice -n 18 zypper update'
-alias systemhalt='sudo shutdown -h now'
-alias systemrestart='sudo shutdown -r now'
+    && sudo nice -n 18 zypper update"
+alias systemhalt="sudo shutdown -h now"
+alias systemrestart="sudo shutdown -r now"
 # git
-alias gitamend='git commit --verbose -a --amend'
-alias gitbranch='git branch -a -vv'
-alias gitcommit='gitdiff && git add . && git commit -a'
-alias gitdiff='git diff --ignore-all-space --color=always | less'
-alias gitgrep='git rev-list --all | xargs git grep --break'
-alias gitpull='git pull --stat --all'
-alias gitpush='gitpull && echo && git push --force-with-lease --set-upstream && echo && git remote show origin'
-alias gitremote='git remote --verbose && git fetch --all --prune --progress'
-alias gitshow='git show-branch -a --date-order | less'
-alias gitstatus='git status | less'
-alias gitstash='git stash show --stat -p'
-alias gitlog='gitstatus && gitdiff && gitshow && git log --stat -p --graph'
-alias gitrebase='git rebase -i'
+alias gitamend="git commit --verbose -a --amend"
+alias gitbranch="git branch -a -vv"
+alias gitcommit="gitdiff && git add . && git commit -a"
+alias gitdiff="git diff --ignore-all-space --color=always | less"
+alias gitgrep="git rev-list --all | xargs git grep --break"
+alias gitpull="git pull --stat --all"
+alias gitpush="gitpull && echo && git push --force-with-lease --set-upstream && echo && git remote show origin"
+alias gitremote="git remote --verbose && git fetch --all --prune --progress"
+alias gitshow="git show-branch -a --date-order | less"
+alias gitstatus="git status | less"
+alias gitstash="git stash show --stat -p"
+alias gitlog="gitstatus && gitdiff && gitshow && git log --stat -p --graph"
+alias gitrebase="git rebase -i"
 if [ -f .config/bash/darwin.sh ]; then
     source .config/bash/darwin.sh
 fi
@@ -115,7 +115,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
-alias laptop='bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)'
+alias laptop="bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)"
 
 export PATH="$HOME/.bin:$PATH"
 more
