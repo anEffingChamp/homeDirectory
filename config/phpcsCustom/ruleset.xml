@@ -4,4 +4,15 @@
         This is a custom coding standard based on Zend, but also enabling
         rules around commenting.
     </description>
+    <arg name='tab-width' value='4' />
+    <rule ref='Zend'/>
+    <rule ref='Generic.Commenting.DocComment.MissingShort' />
+    <rule ref='Generic.Commenting.DocComment.TagValueIndent' />
+    <rule ref='PEAR.Commenting.ClassComment.MissingCategoryTag' />
+    <rule ref='PEAR.Commenting.ClassComment.MissingLicenseTag' />
+    <rule ref='PEAR.Commenting.ClassComment.MissingLinkTag' />
+    <rule ref='PEAR.Commenting.FunctionComment.Missing' />
+    <rule ref='PEAR.Commenting.FunctionComment.MissingReturn' />
+    <rule ref='PEAR.Commenting.FunctionComment.WrongStyle' />
+    <rule ref='PEAR.Commenting.FunctionComment.MissingParamTag' />
 </ruleset>
