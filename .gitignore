@@ -1,5 +1,4 @@
 bin
 .libraries
-config
 vim/plugged
 vim/.netrwhist
