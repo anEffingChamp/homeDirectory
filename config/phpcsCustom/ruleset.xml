@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="phpcsCustom">
+    <description>
+        This is a custom coding standard based on Zend, but also enabling
+        rules around commenting.
+    </description>
+</ruleset>

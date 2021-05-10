@@ -118,4 +118,3 @@ export PATH
 alias laptop="bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)"
 
 export PATH="$HOME/.bin:$PATH"
-more
