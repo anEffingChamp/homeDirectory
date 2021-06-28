@@ -14,6 +14,7 @@ if [ $(uname) == 'Darwin' ]; then
         # I manually append a special character for domains that require it.
         pbcopy <<< "$(\supergenpass --length 19 --password $szPass "$@")!"
     }
+    alias cat='cat -bs'
     alias cd='functionCD'
     alias chmod='chmod -vv'
     alias ls='ls -GA'
