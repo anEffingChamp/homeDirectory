@@ -40,6 +40,8 @@
     recurseSubmodules = on-demand
 [rebase]
     stat = true
+[tag]
+    sort=taggerdate
 [user]
     email = jon@smalls.rocks
     name  = Jonathan Smalls
