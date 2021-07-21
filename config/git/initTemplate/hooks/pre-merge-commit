@@ -21,6 +21,7 @@ echo "merge checklist
 - Did you write the merge branch in a development environment?
 - Does your work look good to you?
 - Does it pass all of its tests?
+- Have you reviewed it with some one else?
 
 - Did you publish this to a beta environment?
 - Have the users reviewed, and approved it in beta?
