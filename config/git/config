@@ -26,10 +26,14 @@
     renames    = copy
 [init]
     templatedir = ~/.config/git/initTemplate
-	defaultBranch = dev
+    defaultBranch = dev
 [merge]
-    tool      = vimdiff
-    verbosity = 1
+    branchdesc  = true
+    guitool     = vimdiff
+    log         = true
+    renormalize = true
+    tool        = vimdiff
+    verbosity   = 2
 [push]
     default           = current
     followTags        = true
