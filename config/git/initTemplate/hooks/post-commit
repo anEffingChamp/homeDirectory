@@ -1,6 +1,15 @@
-#!/bin/bash --
-rm style.css &&
-	sass --update -t compressed --no-cache . &&
-	csslint style.css
+#!/usr/bin/env php
+<?php
+$cssFile = "assets/index.css";
+$cssLint = '';
+if (false === empty(shell_exec('which csslint'))) {
+    $cssLint = "&& csslint $cssFile";
+}
+
+$output  = shell_exec(
+    "rm assets/index.css && \
+        sass assets/index.scss $cssFile $cssLint"
+);
+echo "$output \n \n";
 # grunt
 # mysqldump
