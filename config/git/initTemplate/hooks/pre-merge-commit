@@ -22,6 +22,7 @@ echo "merge checklist
 - Does your work look good to you?
 - Does it pass all of its tests?
 - Have you reviewed it with some one else?
+- Is any thing important ongoing that you should consider?
 
 - Did you publish this to a beta environment?
 - Have the users reviewed, and approved it in beta?
