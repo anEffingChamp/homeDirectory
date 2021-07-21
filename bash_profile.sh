@@ -1,4 +1,5 @@
 export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
+
 export PATH="/usr/local/mysql/bin:~/bin:$PATH"
 
 # external configuration
