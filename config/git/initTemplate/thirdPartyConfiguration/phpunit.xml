@@ -1,0 +1,15 @@
+<!-- <phpunit executionOrder='random' testdox='true'> -->
+<phpunit>
+    <filter>
+        <whitelist>
+            <directory suffix='.php'> models </directory>
+            <directory suffix='.php'> controllers </directory>
+            <directory suffix='.php'> libraries </directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type='coverage-html' target='tests/coverage'/>
+        <log type='coverage-text' target='php://stdout'
+            showUncoveredFiles='true' showOnlySummary='true'/>
+    </logging>
+</phpunit>
