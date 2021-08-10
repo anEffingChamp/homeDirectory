@@ -64,7 +64,7 @@ alias ls="ls -Ah --color --group-directories-first"
 alias mv="mv -iv"
 alias open="xdg-open"
 alias ssh="ssh -aYC"
-alias rm="rm -v"
+alias rm="rm -Iv"
 # Normally I prefer human legible command flags, but this would throw a 'too
 # many flags' error in that case.
 alias rsync="rsync -uLphP6 --delay-updates"

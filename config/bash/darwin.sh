@@ -21,6 +21,7 @@ if [ $(uname) == 'Darwin' ]; then
     alias httpd='sudo /usr/sbin/apachectl'
     alias open='\open'
     alias ps='ps axjSm'
+    alias rm='rm -iv'
     alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
     alias w='w -i'
 # shutdown
