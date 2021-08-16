@@ -2,3 +2,6 @@ bin
 .libraries
 vim/plugged
 vim/.netrwhist
+node_modules
+package-lock.json
+.eslintrc.json
