@@ -13,8 +13,8 @@ fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/.libraries/liquidprompt/liquidprompt
 
-PS_PERSONALITY="linux"
-EDITOR="vim"
+export PS_PERSONALITY="linux"
+export EDITOR="vim"
 # Always remember that if you ever have a problem with an alias, you can send a
 # command unaltered directly to the binary, eg
 #       /bin/ls --help
@@ -114,8 +114,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
+export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 
 alias laptop="bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)"
 
