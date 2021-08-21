@@ -1,4 +1,5 @@
 if [ $(uname) == 'Darwin' ]; then
+    export LSCOLORS='GxFxCxDxBxegedabagaced'
     function functionCD(){
         \cd "$@"
         \ls -GA
