@@ -49,6 +49,17 @@ function functionJava() {
     javac ${fileName}.java && java $fileName && rm *.class
 }
 alias less="less -msr"
+alias ln="ln -svhf"
+alias ls="ls -Ah --color --group-directories-first"
+alias mv="mv -iv"
+alias open="xdg-open"
+alias ping="ping -c 10 -i 0.2"
+alias ps="ps -ax"
+alias rm="rm -Iv"
+# Normally I prefer human legible command flags, but this would throw a 'too
+# many flags' error in that case.
+alias rsync="rsync -uLphP6 --delay-updates"
+alias ssh="ssh -aYC"
 alias supergenpass="functionSupergenpass"
 function functionSupergenpass() {
     echo -n "Enter password. "
@@ -59,23 +70,12 @@ function functionSupergenpass() {
     "$(supergenpass --length 19 --password $passMaster)!" \
         | xclip -selection clipboard;
 }
-alias ln="ln -svhf"
-alias ls="ls -Ah --color --group-directories-first"
-alias mv="mv -iv"
-alias open="xdg-open"
-alias ssh="ssh -aYC"
-alias rm="rm -Iv"
-# Normally I prefer human legible command flags, but this would throw a 'too
-# many flags' error in that case.
-alias rsync="rsync -uLphP6 --delay-updates"
 alias tar="tar -xzvf"
 alias top="top -bn 1 -u $USER"
-alias wget="wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension"
-alias ping="ping -c 10 -i 0.2"
-alias ps="ps -ax"
 alias traceroute="traceroute -nw 1"
 alias type="type -a"
 alias vimBasic="vim -Nu NONE"
+alias wget="wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension"
 alias zypper="sudo zypper"
 # shutdown
 alias systemupgrade="sudo nice -n 18 npm upgrade -g \
