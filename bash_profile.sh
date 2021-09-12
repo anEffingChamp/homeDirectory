@@ -51,6 +51,7 @@ function functionJava() {
 alias less="less -msr"
 alias ln="ln -svhf"
 alias ls="ls -Ah --color --group-directories-first"
+alias mkdir="mkdir --parents --verbose"
 alias mv="mv -iv"
 alias open="xdg-open"
 alias ping="ping -c 10 -i 0.2"
