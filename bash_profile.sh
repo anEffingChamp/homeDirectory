@@ -49,7 +49,7 @@ function functionJava() {
     javac ${fileName}.java && java $fileName && rm *.class
 }
 alias less="less -msr"
-alias ln="ln -svhf"
+alias ln="ln -svi"
 alias ls="ls -Ah --color --group-directories-first"
 alias mkdir="mkdir --parents --verbose"
 alias mv="mv -iv"
