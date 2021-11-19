@@ -19,7 +19,7 @@ if [ $(uname) == 'Darwin' ]; then
     alias cd='functionCD'
     alias chmod='chmod -vv'
     alias ls='ls -GA'
-    #alias httpd='sudo /usr/sbin/apachectl'
+    alias httpd='sudo apachectl'
     alias mkdir='mkdir -pv'
     alias open='\open'
     alias ps='ps axjSm'
