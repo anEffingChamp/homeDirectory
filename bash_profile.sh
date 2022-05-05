@@ -40,7 +40,7 @@ function functionFind() {
 alias grep="functionGrep"
 function functionGrep() {
     \grep --line-number --ignore-case --color=always --recursive \
-        --exclude-dir=.git $@ .
+        --exclude-dir=.git --binary-file=without-match $@ .
 }
 # This function takes one argument to compile, and execute a Java program.
 alias java="functionJava"
