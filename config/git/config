@@ -21,9 +21,11 @@
     symlinks         = true
     quotepath        = false
 [diff]
-    colorMoved = dimmed_zebra
-    dirstat    = lines
-    renames    = copy
+    algorithm    = minimal
+    colorMoved   = dimmed-zebra
+    colorMovedWS = ignore-all-space
+    dirstat      = lines
+    renames      = copy
 [init]
     templatedir = ~/.config/git/initTemplate
     defaultBranch = dev
