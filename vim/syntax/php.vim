@@ -1,1 +1,1 @@
-../../.libraries/vimPHP/syntax/php.vim
+../plugged/php.vim/syntax/php.vim
