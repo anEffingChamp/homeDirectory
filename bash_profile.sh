@@ -21,7 +21,7 @@ export EDITOR="vim"
 #       \ls --help
 alias ":e"="vim"
 alias ":x"="exit"
-alias bc="bc -l"
+alias bc="calc"
 alias cat="cat --number --squeeze-blank"
 alias chmod="chmod --changes"
 alias cd="functionCD"
