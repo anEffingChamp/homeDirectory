@@ -47,3 +47,5 @@
 [user]
     email = jon@smalls.rocks
     name  = Jonathan Smalls
+[pull]
+	rebase = false
