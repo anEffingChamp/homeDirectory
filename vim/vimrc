@@ -40,6 +40,7 @@ set <Home>=[29~
 set <End>=[31~
 set foldmethod=indent
 set textwidth=80
+colorscheme lunaperche
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 highlight extraWhiteSpace ctermbg=darkgreen guibg=darkgreen
 if &diff
