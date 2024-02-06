@@ -86,7 +86,7 @@ alias systemhalt="sudo shutdown -h now"
 alias systemrestart="sudo shutdown -r now"
 # git
 alias gitamend="git commit --verbose -a --amend"
-alias gitbranch="git branch -a -vv"
+alias gitbranch="git branch -a"
 alias gitcommit="gitdiff && git add . && git commit -a"
 alias gitdiff="git diff -p --stat --color=always | less"
 alias gitgrep="git rev-list --all | xargs git grep --break"
