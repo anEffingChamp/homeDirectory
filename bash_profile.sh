@@ -92,7 +92,8 @@ alias gitdiff="git diff -p --stat --color=always | less"
 alias gitgrep="git rev-list --all | xargs git grep --break"
 # TODO How can I pass an argument to git merge, then run git mergetool?
 alias gitpull="git pull --stat --all"
-alias gitpush="gitpull && echo && git push --tags --force-with-lease --set-upstream && echo && git remote show origin"
+alias gitpush="gitpull && echo && git push --tags --force-with-lease --set-upstream \
+    && echo && git remote prune github && git remote show github"
 alias gitremote="git remote --verbose && gitbranch"
 #alias gitremote="git remote --verbose && git fetch --all --prune --progress"
 alias gitshow="git show-branch -a --date-order | less"
