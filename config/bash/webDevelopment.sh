@@ -1,4 +1,3 @@
-alias csslint='csslint --ignore=box-model'
 alias ifconfig='curl ifconfig.me'
 # http://www.hpl.hp.com/research/linux/httperf/httperf-man-0.9.txt
 alias httperf='httperf --hog --num-conns=100 --retry-on-failure --timeout=3'
@@ -8,9 +7,13 @@ alias mysqldump='mysqldump --opt --verbose'
 alias npm-install='sudo npm upgrade -g'
 # http://nmap.org/book/man-port-scanning-techniques.html
 alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
+#php
+alias phpcbf="phpcbf --standard=Zend"
 alias phpcs='phpcs --standard=Zend'
 alias phpunit='phpunit --colors=auto --reverse-list'
-alias piwik='php ~/webRoot/piwik/console'
+alias matomo='php ~/webRoot/piwik/console'
+# code compilation, linting
+alias csslint='csslint --ignore=box-model'
 alias sass-update='sass assets/index.scss assets/index.css'
 alias tidy='tidy -errors -modify -indent 4 -wrap 80'
 alias amazonTunnel="ssh -L 1111:clouddb:5432 garfouser@bastion"

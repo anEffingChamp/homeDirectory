@@ -101,8 +101,6 @@ alias gitstatus="git status | less"
 alias gitstash="git stash show --stat -p"
 alias gitlog="gitstatus && gitdiff && gitshow && git log --stat -p --graph"
 alias gitrebase="git rebase -i"
-#php
-alias phpcbf="phpcbf --standard=Zend"
 if [ -f .config/bash/darwin.sh ]; then
     source .config/bash/darwin.sh
 fi
