@@ -17,7 +17,7 @@ alias csslint='csslint --ignore=box-model'
 alias sass-update='sass assets/index.scss assets/index.css'
 alias tidy='tidy -errors -modify -indent 4 -wrap 80'
 # server administration
-alias serverCheck='ssh thenawn \top -bn 1 | less'
+alias siteCheck='ssh thenawn \top -bn 1 | less'
 # Vimdiff() takes a file path to an argument. It assumes that the file is
 # also available at a corresponding path on the beta, and live servers.
 # Currently it points to NOAA servers, although this is easy enough to change.
