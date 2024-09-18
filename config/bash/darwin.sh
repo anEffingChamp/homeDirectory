@@ -26,6 +26,7 @@ if [ $(uname) == 'Darwin' ]; then
     alias rm='rm -iv'
     alias top='top -l 1 -o mem -stats pid,user,command,cpu,mem -n 10'
     alias w='w -i'
+    alias homeBackup='cp -ru ~/Documents/* thenawn:~/Documents/'
 # shutdown
     poweroff='sudo shutdown -h 60'
 fi
