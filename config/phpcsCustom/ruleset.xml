@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+reference:
+https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
+-->
 <ruleset name="phpcsCustom">
     <description>
         This is a custom coding standard based on Zend, but also enabling

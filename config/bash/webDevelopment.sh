@@ -9,10 +9,10 @@ alias npm-install='sudo npm upgrade -g'
 alias nmap='sudo nmap -sUSYV -O --osscan-limit -T4 --spoof-mac 0 -oA %s-nmap'
 #php
 alias phpcbf="phpcbf --standard=Zend"
-alias phpcs='phpcs --standard=Zend'
+alias phpcs='phpcs --standard=~/.config/phpcsCustom/ruleset.xml'
 # unit testing
 alias phpunit='phpunit --colors=auto --reverse-list'
-alias 'unittest'='phpunit . | less'
+alias phptest='phpunit . | less'
 alias matomo='php ~/webRoot/piwik/console'
 # code compilation, linting
 alias csslint='csslint --ignore=box-model'
