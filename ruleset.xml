@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+reference:
+https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
+-->
+<ruleset name="customStandard">
+    <description>
+        This coding standard is based on Zend with additional rules around
+        function comments.
+    </description>
+    <rule ref="Zend">
+    </rule>
+  <rule ref="Squiz.Commenting.FunctionComment" />
+  <rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
+  <rule ref="Squiz.Commenting.ClassComment" />
+  <rule ref="Squiz.Commenting.FileComment" />
+  <rule ref="Squiz.Commenting.VariableComment" />
+</ruleset>
