@@ -80,8 +80,9 @@ alias wget="wget --timestamping --no-verbose --continue --no-host-directories --
 alias zypper="sudo zypper"
 # shutdown
 alias systemupgrade="sudo nice -n 18 npm upgrade -g \
-    && sudo nice -n 18 zypper install-new-recommends \
-    && sudo nice -n 18 zypper update"
+    && sudo nice -n 18 aptitude update \
+    && sudo nice -n 18 aptitude upgrade \
+    && sudo nice -n 18 certbot run"
 alias systemhalt="sudo shutdown -h now"
 alias systemrestart="sudo shutdown -r now"
 # git
