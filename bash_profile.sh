@@ -1,4 +1,4 @@
-export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:$PATH"
+export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 export PATH="/usr/local/mysql/bin:~/bin:$PATH"
 
