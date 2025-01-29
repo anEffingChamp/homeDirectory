@@ -12,7 +12,7 @@ alias phpcbf="phpcbf --standard=Zend"
 alias phpcs='phpcs --standard=Zend'
 # unit testing
 alias phpunit='phpunit --colors=auto --reverse-list'
-alias 'unittest'='phpunit . | less'
+alias phptest='phpunit . | less'
 alias matomo='php ~/webRoot/piwik/console'
 # code compilation, linting
 alias csslint='csslint --ignore=box-model'
