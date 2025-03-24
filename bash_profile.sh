@@ -79,10 +79,10 @@ alias vimBasic="vim -Nu NONE"
 alias wget="wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension"
 alias zypper="sudo zypper"
 # shutdown
-alias systemupgrade="sudo nice -n 18 npm upgrade -g \
-    && sudo nice -n 18 aptitude update \
+alias systemupgrade="sudo nice -n 18 aptitude update \
     && sudo nice -n 18 aptitude upgrade \
-    && sudo nice -n 18 certbot run"
+    && sudo nice -n 18 certbot run \
+    && sudo nice -n 18 npm upgrade -g"
 alias systemhalt="sudo shutdown -h now"
 alias systemrestart="sudo shutdown -r now"
 # git
