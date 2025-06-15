@@ -1,5 +1,4 @@
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-
 export PATH="~/bin:$PATH"
 
 # external configuration
@@ -114,12 +113,4 @@ fi
 # Friday.
 ls
 
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-
 alias laptop="bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)"
-
-export PATH="$HOME/.bin:$PATH"
