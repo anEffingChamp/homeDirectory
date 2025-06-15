@@ -87,7 +87,7 @@ alias systemrestart="sudo shutdown -r now"
 # git
 alias gitamend="git commit --verbose -a --amend"
 alias gitbranch="git branch -a"
-alias gitcommit="gitdiff && git add . && git commit -a"
+alias gitcommit="gitdiff && git add . && git commit -ap"
 alias gitdiff="git diff -p --stat --color=always | less"
 alias gitgrep="git rev-list --all | xargs git grep --break"
 # TODO How can I pass an argument to git merge, then run git mergetool?
