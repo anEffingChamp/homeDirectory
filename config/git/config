@@ -45,7 +45,7 @@
 [tag]
     sort=taggerdate
 [user]
-    email = jon@smalls.rocks
+    email = git@smalls.rocks
     name  = Jonathan Smalls
 [pull]
 	rebase = false

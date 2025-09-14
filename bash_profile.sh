@@ -1,5 +1,6 @@
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="~/bin:$PATH"
+export PATH="/opt/local/usr/bin:/opt/local/usr/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+export PATH="/usr/local/mysql/bin:~/bin:$PATH"
 
 # external configuration
 if [[ -d .config ]]; then
@@ -79,9 +80,10 @@ alias vimBasic="vim -Nu NONE"
 alias wget="wget --timestamping --no-verbose --continue --no-host-directories --no-cache --no-check-certificate -e robots=off --adjust-extension"
 alias zypper="sudo zypper"
 # shutdown
-alias systemupgrade="sudo nice -n 18 npm upgrade -g \
-    && sudo nice -n 18 zypper install-new-recommends \
-    && sudo nice -n 18 zypper update"
+alias systemupgrade="sudo nice -n 18 aptitude update \
+    && sudo nice -n 18 aptitude upgrade \
+    && sudo nice -n 18 certbot run \
+    && sudo nice -n 18 npm upgrade -g"
 alias systemhalt="sudo shutdown -h now"
 alias systemrestart="sudo shutdown -r now"
 # git
